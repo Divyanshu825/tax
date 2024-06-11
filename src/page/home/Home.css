@@ -1,0 +1,7 @@
+.home{
+    background-image: url("/src/Images/pic1.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: aqua;
+}
