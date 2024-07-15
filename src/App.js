@@ -9,7 +9,6 @@ import Service from './page/services/Service';
 import OurClient from './page/ourclient/OurClient';
 import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
-import About from './page/About copy/About';
 
 // import Row from './pages/Row/Row';
 // import Powder from './pages/Powder/Powder';
@@ -23,7 +22,7 @@ const App = () => {
       <Routes>
         
         <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/service" element={<Service />} />
         <Route path="/client" element={<OurClient />} />
