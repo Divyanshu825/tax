@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 
 
 import Home from './page/home/Home';
-import About from './page/about/About';
 import Contact from './page/contact/Contact';
 import Service from './page/services/Service';
 import OurClient from './page/ourclient/OurClient';
 import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
+import About from './page/About copy/About';
 
 // import Row from './pages/Row/Row';
 // import Powder from './pages/Powder/Powder';
