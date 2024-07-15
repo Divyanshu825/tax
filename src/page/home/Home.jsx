@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import Banner from './component/banner/Banner'
-import 'D:/Dreamsakar/src/page/home/Home.css'
+import './Home.css'
 
 
 const Home = forwardRef((props, ref) => {
