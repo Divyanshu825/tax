@@ -25,6 +25,10 @@ const ProfileCardData = [
     {
         title: 'divyanshu',
         img: pic
-    }
+    },
+    {
+        title: 'divyanshu',
+        img: pic4
+    },
 ]
 export default ProfileCardData

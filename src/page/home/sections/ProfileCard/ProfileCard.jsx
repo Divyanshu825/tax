@@ -6,26 +6,27 @@ const { Meta } = Card;
 
 const ProfileCard = () => {
     return (
-        <div>
-            {ProfileCardData.map((item, index) => {
-                console.log("index", item.img);
-                return (
-                    <div className='Card'>
-                        <Card
-                            key={index}
-                            hoverable
-                            style={{
-                                width: 540,
+        <div className='ProfileCard_container'>
+            <div className='ProfileCard_Card'>
+                {ProfileCardData.map((item, index) => {
+                    console.log("index", item.img);
+                    return (
+                        <div className='ProfileCard_Card'>
+                            <Card
+                                key={index}
+                                hoverable
+                                style={{
+                                    width: 440,
 
-                            }}
-                            cover={<img alt="example" src={item.img} />}
-                        >
-                            <Meta title={item.title} description="www.instagram.com" />
-                        </Card>
-                    </div>
-                )
-            })}
-
+                                }}
+                                cover={<img alt="example" src={item.img} />}
+                            >
+                                <Meta title={item.title} description="www.instagram.com" />
+                            </Card>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }

@@ -1,7 +1,12 @@
-.Card{
-   margin-top: 100px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+.ProfileCard_container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.ProfileCard_Card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    margin: 1rem 20px 20px 50px;
 }
