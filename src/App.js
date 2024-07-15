@@ -9,28 +9,32 @@ import Service from './page/services/Service';
 import OurClient from './page/ourclient/OurClient';
 import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
+import Footer from './component/footer/Footer';
 
 
 
 
 const App = () => {
- 
+
 
   return (
     <>
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/client" element={<OurClient />} />
-        <Route path="/job" element={<Jobs />} />
-        
+      <Router>
+        <Navbar />
 
-      </Routes>
-     </Router>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/client" element={<OurClient />} />
+          <Route path="/job" element={<Jobs />} />
+
+
+        </Routes>
+
+        <Footer />
+      </Router>
     </>
   );
 };

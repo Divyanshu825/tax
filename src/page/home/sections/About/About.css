@@ -1,0 +1,56 @@
+/* App.css */
+.AboutSection_Container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.AboutSection_Main {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutSection_header {
+    background-color: transparent;
+    padding: 20px;
+}
+
+.AboutSection_Underline {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.AboutSection_header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.AboutSection_Content {
+    color: #000;
+    font-size: 1.5rem;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 3rem;
+}
+
+.info-section {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

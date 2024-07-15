@@ -1,0 +1,28 @@
+.GoogleMap_container {
+    width: 100%;
+}
+
+.GoogleMap_Main{
+    width: 100%;
+    margin-top: 20rem;
+    padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    display: grid;
+    column-gap: 8rem;
+    row-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.GoogleMap_text{
+    margin-top: 5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    color: #000;
+    font-weight: 600;
+}

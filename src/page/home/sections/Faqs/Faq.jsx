@@ -1,58 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
-
-const Faqs = () => {
-    const data = {
-    title: "FAQ (How it works)",
-    rows: [
-        {
-            title: "Lorem ipsum dolor sit amet,",
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-              Fusce sed commodo purus, at tempus turpis.`,
-        },
-        {
-            title: "Nunc maximus, magna at ultricies elementum",
-            content:
-                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
-        },
-        {
-            title: "Curabitur laoreet, mauris vel blandit fringilla",
-            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
-        },
-        {
-            title: "What is the package version",
-            content: <p>current version is 1.2.1</p>,
-        },
-    ],
-};
+import FAQS from "./FaqsList";
+import './Faq.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const styles = {
-    // bgColor: 'white',
+    bgColor: 'white',
     titleTextColor: "blue",
     rowTitleColor: "blue",
-    // rowContentColor: 'grey',
-    // arrowColor: "red",
+    rowContentColor: 'grey',
+    arrowColor: "red",
 };
 
 const config = {
-    // animate: true,
-    // arrowIcon: "V",
-    // tabFocus: true
+    animate: true,
+    arrowIcon: "V",
+    tabFocus: true
 };
-  return (
-    <div className='faq_home_main'>
-      <Faq
-                data={data}
-                styles={styles}
-                config={config}
-            />
-    </div>
-  )
+
+
+const Faqs = () => {
+
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 5000,
+            easing: "ease-in-out-cubic",
+        });
+    }, []);
+
+    return (
+        <div className="Home_Faq_Container">
+            <div className="Home_Faq_PName">
+                <h1 >Frequently Asked Questions</h1>
+            </div>
+
+            <div className="Home_Faq">
+                <Faq
+                    data={FAQS}
+                    styles={styles}
+                    config={config}
+                />
+            </div>
+        </div >
+    )
 }
 
 export default Faqs
