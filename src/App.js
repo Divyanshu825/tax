@@ -10,8 +10,9 @@ import OurClient from './page/ourclient/OurClient';
 import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
 
-// import Row from './pages/Row/Row';
-// import Powder from './pages/Powder/Powder';
+
+
+
 const App = () => {
  
 
@@ -20,7 +21,6 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        
         <Route path="/home" element={<Home />} />
         {/* <Route path="/about" element={<About />} /> */}
         <Route path="/contact" element={<Contact />} />
