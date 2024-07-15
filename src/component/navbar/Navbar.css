@@ -42,7 +42,7 @@
 .navbar-menu ul li {
   margin-right: 20px;
   font-weight: 500;
-
+  
 }
 
 /* 
@@ -56,7 +56,7 @@
 .navbar-menu ul li:hover>a {
   transform-origin: left;
   color: rgba(0, 0, 3, 1);
-  text-decoration: underline;
+  text-decoration: none;
   background-color: antiquewhite;
   border-radius: 20px;
   padding: 10px 10px;
