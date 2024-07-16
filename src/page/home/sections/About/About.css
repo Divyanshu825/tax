@@ -20,7 +20,7 @@
 
 .AboutSection_Underline {
     font-size: 2rem;
-    color: #000;
+    color: #fff;
     margin-bottom: 2rem;
 }
 
@@ -28,11 +28,12 @@
     margin: 0;
     font-size: 3rem;
     font-weight: 500;
+    color: #fff;
     margin-bottom: 2rem;
 }
 
 .AboutSection_Content {
-    color: #000;
+    color: #fff;
     font-size: 1.5rem;
 }
 

@@ -1,16 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.main {
+.Banner_main {
     width: 100%;
-    height: 60%;
+    height: 50%;
 }
 
 video {
     width: 100%;
-    height: 60%;
+    height: 800px;
     object-fit: cover;
 }
 

@@ -10,6 +10,7 @@ import OurClient from './page/ourclient/OurClient';
 import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
 import Footer from './component/footer/Footer';
+import About from './page/About/About';
 
 
 
@@ -24,7 +25,7 @@ const App = () => {
 
         <Routes>
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />} />
           <Route path="/client" element={<OurClient />} />

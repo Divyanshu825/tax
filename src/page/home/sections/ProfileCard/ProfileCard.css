@@ -1,10 +1,29 @@
-.ProfileCard_container{
+.ProfileCard_container {
     display: flex;
-    flex-direction: column;
     margin: 0 auto;
+    flex-direction: column;
 }
 
-.ProfileCard_Card{
+.ProfileCard_Main {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.ProfileCard_header {
+    background-color: transparent;
+    padding: 20px;
+}
+
+.ProfileCard_header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.ProfileCard_Card {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 40px;

@@ -1,0 +1,60 @@
+.SliderSection_container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.SliderSection_Main {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.SliderSection_header {
+    background-color: transparent;
+    padding: 20px;
+}
+
+.SliderSection_header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.SliderSection-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.SliderSection-swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    padding: 30px;
+}
+
+
+.SwiperSlide {
+    height: 500px;
+    padding: 30px;
+    background-color: black;
+}
+
+.SwiperSlide_Content {
+    display: flex;
+    flex-direction: column;
+}
+
+.SwiperSlide_Content h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    margin-top: -60px;
+}

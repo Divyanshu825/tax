@@ -1,0 +1,17 @@
+.AboutCarousel-swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.AboutCarousel-swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+}
+
+.AboutCarousel-swiper-slide img {
+  display: block;
+  width: 100%;
+}
