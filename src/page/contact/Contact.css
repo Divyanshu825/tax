@@ -1,3 +1,56 @@
+.Contact_Container {
+    background-image: url('/src/Images/bgImage.jpg');
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+}
+
+.Contact_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.Contact_head h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+
+.Contact_head h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 2rem;
+    color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .swiper {
     width: 100%;
     height: 100%;

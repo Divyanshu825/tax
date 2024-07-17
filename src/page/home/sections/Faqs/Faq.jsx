@@ -25,7 +25,7 @@ const Faqs = () => {
     useEffect(() => {
         AOS.init({
             offset: 200,
-            duration: 5000,
+            duration: 2500,
             easing: "ease-in-out-cubic",
         });
     }, []);
@@ -33,10 +33,10 @@ const Faqs = () => {
     return (
         <div className="Home_Faq_Container">
             <div className="Home_Faq_PName">
-                <h1 >Frequently Asked Questions</h1>
+                <h1 data-aos="fade-up" data-aos-duration="2000">Frequently Asked Questions</h1>
             </div>
 
-            <div className="Home_Faq">
+            <div className="Home_Faq" data-aos="fade-up" data-aos-duration="2000">
                 <Faq
                     data={FAQS}
                     styles={styles}

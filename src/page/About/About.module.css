@@ -33,12 +33,12 @@
 
 .text_container_map {
     padding: 0 60px 0 0;
-    width: 50%;
+    width: 60%;
 }
 
 .text_container_map2 {
     padding: 0 0 0 60px;
-    width: 50%;
+    width: 60%;
 }
 
 .image_container_map {
@@ -48,7 +48,7 @@
 }
 
 .image_map {
-    max-width: 500px;
+    max-width: 800px;
     transition: 0.5s all ease-in-out;
     object-fit: fill;
 

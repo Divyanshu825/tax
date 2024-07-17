@@ -2,15 +2,15 @@ import React, { useEffect } from 'react'
 import './ProfileCard.css';
 import ProfileCardData from './ProfileCardData';
 import { Card } from 'antd';
-import Aos from 'aos';
+import AOS from "aos";
 const { Meta } = Card;
 
 const ProfileCard = () => {
 
     useEffect(() => {
-        Aos.init({
+        AOS.init({
             offset: 200,
-            duration: 1000,
+            duration: 2500,
             easing: "ease-in-out-cubic",
         });
     }, []);
@@ -19,14 +19,14 @@ const ProfileCard = () => {
         <div className='ProfileCard_container'>
             <div className='ProfileCard_Main'>
                 <header className="ProfileCard_header " >
-                    <h1>Cards Section</h1>
+                    <h1 data-aos="fade-up" data-aos-duration="2000">Cards Section</h1>
                     {/* <p className='AboutSection_Underline'>---------------------------------------------</p> */}
                 </header>
-                <div className='ProfileCard_Card'>
+                <div className='ProfileCard_Card' data-aos="fade-up" data-aos-duration="2000">
                     {ProfileCardData.map((item, index) => {
                         console.log("index", item.img);
                         return (
-                            <div className='ProfileCard_Card'>
+                            <div className='ProfileCard_Card' data-aos="fade-up" data-aos-duration="2000">
                                 <Card
                                     key={index}
                                     hoverable

@@ -12,26 +12,20 @@ import { Pagination } from 'swiper/modules';
 
 const Contact = () => {
   return (
-    <>
-      <Swiper
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-    </>
+    <div className='Contact_Container'>
+
+      <div className="Overlay_Pages">
+        <div className="Overlay_Pages">
+          <div className="Contact_head"  >
+            <h1>Contact Page</h1>
+            <h2>Home / Contact Page</h2>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
   );
 }
 export default Contact
