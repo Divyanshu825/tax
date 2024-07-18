@@ -2,8 +2,10 @@ import React from 'react'
 import './Service.css';
 
 
-
 const Service = () => {
+
+
+
   return (
     <div className='Service_Container'>
 
@@ -14,6 +16,9 @@ const Service = () => {
             <h2>Home / Service Page</h2>
           </div>
         </div>
+
+
+       
       </div>
 
 

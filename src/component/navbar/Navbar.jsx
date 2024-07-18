@@ -40,8 +40,11 @@ function Navbar() {
             <li>
               <Link to="/job">Apply jobs</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/contact">Contact</Link>
+            </li> */}
+            <li>
+              <Link to="/test">Test</Link>
             </li>
           </ul>
         </div>

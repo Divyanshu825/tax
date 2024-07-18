@@ -6,7 +6,7 @@
 
 .ProfileCard_Main {
     text-align: center;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
 }
@@ -18,7 +18,7 @@
 .ProfileCard_header h1 {
     margin: 0;
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
 }

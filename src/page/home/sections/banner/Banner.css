@@ -1,12 +1,17 @@
-.Banner_main {
+.Banner_swiper {
     width: 100%;
-    height: 50%;
+    height: 100%;
 }
 
-video {
-    width: 100%;
+.Banner_swiper-slide {
+    background-position: center;
+    background-size: cover;
     height: 800px;
-    object-fit: cover;
+}
+
+.Banner_swiper-slide img {
+    display: block;
+    width: 100%;
 }
 
 .content {
@@ -16,35 +21,17 @@ video {
     top: 4rem;
     display: flex;
     flex-direction: column;
+    
+    /* left Side me karne ke liye */
+
+    /* justify-content: center;
+    align-items: start; */
+    
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     color: pink;
     font-weight: 600;
     margin-left: 20px;
     font-size: 50px;
-}
-
-.content2 {
-    position: absolute;
-    height: 60%;
-    width: 100%;
-    top: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: #000;
-    margin-left: 20px;
-    font-size: 10px;
-}
-
-.overlay {
-    position: absolute;
-    top: 5.9rem;
-    left: 0;
-    width: 100%;
-    height: 113%;
-    background-color: rgba(0, 0, 0, .5);
-    /* background-color: aqua; */
-    /* background-color: #000000cc; */
+    left: 40px;
 }

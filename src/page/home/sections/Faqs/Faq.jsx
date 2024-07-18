@@ -32,17 +32,20 @@ const Faqs = () => {
 
     return (
         <div className="Home_Faq_Container">
-            <div className="Home_Faq_PName">
-                <h1 data-aos="fade-up" data-aos-duration="2000">Frequently Asked Questions</h1>
+            <div className='Home_Faq_Main'>
+                <div className="Home_Faq_PName">
+                    <h1 data-aos="fade-up" data-aos-duration="2000">Our services</h1>
+                </div>
+
+                <div className="Home_Faq" data-aos="fade-up" data-aos-duration="2000">
+                    <Faq
+                        data={FAQS}
+                        styles={styles}
+                        config={config}
+                    />
+                </div>
             </div>
 
-            <div className="Home_Faq" data-aos="fade-up" data-aos-duration="2000">
-                <Faq
-                    data={FAQS}
-                    styles={styles}
-                    config={config}
-                />
-            </div>
         </div >
     )
 }

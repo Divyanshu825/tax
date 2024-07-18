@@ -1,0 +1,66 @@
+/* App.css */
+.JobSeeker_Container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    /* padding: 40px; */
+}
+
+.JobSeeker_Main {
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.JobSeeker_header {
+    background-color: transparent;
+    padding: 0 20px 0 20px;
+}
+
+/* .JobSeeker_Underline {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 2rem;
+} */
+
+.JobSeeker_header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.JobSeeker_Content {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.JobSeeker_swiper {
+    width: 100%;
+    height: 100%;
+
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    /* place-items: center; */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    padding: 100px 90px 80px 90px;
+    /* background-color: antiquewhite; */
+}
+
+.JobSeeker_swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: calc((100% - 30px) / 2) !important;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

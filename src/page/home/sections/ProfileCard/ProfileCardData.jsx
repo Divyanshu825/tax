@@ -7,28 +7,17 @@ import pic4 from '../../../../Images/pic5.jpg'
 
 const ProfileCardData = [
     {
-        title: 'divyanshu',
+        title: 'About Us',
         img: pic4
     },
     {
-        title: 'divyanshu',
+        title: 'Clientele',
         img: pic1
     },
     {
-        title: 'divyanshu',
+        title: 'JobSeeker',
         img: pic2
     },
-    {
-        title: 'divyanshu',
-        img: pic3
-    },
-    {
-        title: 'divyanshu',
-        img: pic
-    },
-    {
-        title: 'divyanshu',
-        img: pic4
-    },
+    
 ]
 export default ProfileCardData

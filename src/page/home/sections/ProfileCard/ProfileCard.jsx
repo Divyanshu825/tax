@@ -3,6 +3,12 @@ import './ProfileCard.css';
 import ProfileCardData from './ProfileCardData';
 import { Card } from 'antd';
 import AOS from "aos";
+import { Link } from 'react-router-dom';
+import pic1 from '../../../../Images/bg3.avif'
+import pic2 from '../../../../Images/bg5.jpg'
+import pic3 from '../../../../Images/bg4.avif'
+
+
 const { Meta } = Card;
 
 const ProfileCard = () => {
@@ -23,24 +29,44 @@ const ProfileCard = () => {
                     {/* <p className='AboutSection_Underline'>---------------------------------------------</p> */}
                 </header>
                 <div className='ProfileCard_Card' data-aos="fade-up" data-aos-duration="2000">
-                    {ProfileCardData.map((item, index) => {
-                        console.log("index", item.img);
-                        return (
-                            <div className='ProfileCard_Card' data-aos="fade-up" data-aos-duration="2000">
-                                <Card
-                                    key={index}
-                                    hoverable
-                                    style={{
-                                        width: 440,
+                    <Link to="/about">
+                        <Card
+                            hoverable
+                            style={{
+                                width: 440,
 
-                                    }}
-                                    cover={<img alt="example" src={item.img} />}
-                                >
-                                    <Meta title={item.title} description="www.instagram.com" />
-                                </Card>
-                            </div>
-                        )
-                    })}
+                            }}
+                            cover={<img alt="example" src={pic1} />}
+                        >
+                            <Meta description={"About Us"} style={{ fontSize: "30px", color: 'black', fontWeight: 700 }} />
+                        </Card>
+                    </Link>
+
+                    <Link to="/client">
+                        <Card
+                            hoverable
+                            style={{
+                                width: 440,
+
+                            }}
+                            cover={<img alt="example" src={pic2} />}
+                        >
+                            <Meta description={"Clientele"} style={{ fontSize: "30px", color: 'black', fontWeight: 700 }} />
+                        </Card>
+                    </Link>
+
+                    <Link to="/job">
+                        <Card
+                            hoverable
+                            style={{
+                                width: 440,
+
+                            }}
+                            cover={<img alt="example" src={pic3} />}
+                        >
+                            <Meta description={"JobSeeker"} style={{ fontSize: "30px", color: 'black', fontWeight: 700 }} />
+                        </Card>
+                    </Link>
                 </div>
             </div>
         </div>

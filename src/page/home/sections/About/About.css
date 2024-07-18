@@ -27,7 +27,7 @@
 .AboutSection_header h1 {
     margin: 0;
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
 }
@@ -35,6 +35,8 @@
 .AboutSection_Content {
     color: #fff;
     font-size: 1.5rem;
+    text-align: center;
+
 }
 
 main {
@@ -45,6 +47,7 @@ main {
     flex-wrap: wrap;
     padding: 20px;
     margin-top: 3rem;
+    text-align: center;
 }
 
 .info-section {

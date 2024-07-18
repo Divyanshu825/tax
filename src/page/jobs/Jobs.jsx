@@ -28,7 +28,11 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   First name*
                 </label>
-                <input className="appearance-none block w-full bg-transparent  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="grid-first-name"
+                <input
+
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name"
                   type="text"
                   name="productName"
                   placeholder="Product Name"
@@ -41,8 +45,12 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Last name*
                 </label>
-                <input className="appearance-none block w-full bg-gray-200  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name"
-                  type="number"
+                <input
+
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name"
+                  type="text"
                   name="productPrice"
                   placeholder="Product Price"
 
@@ -56,7 +64,11 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Address*
                 </label>
-                <input className="appearance-none block w-full bg-transparent  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-first-name"
+                <input
+
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name"
                   type="text"
                   name="productName"
                   placeholder="Product Name"
@@ -69,7 +81,10 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Function Area*
                 </label>
-                <input className="appearance-none block w-full bg-gray-200  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name"
+                <input
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name"
                   type="number"
                   name="productPrice"
                   placeholder="Product Price"
@@ -84,7 +99,10 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Email Address*
                 </label>
-                <input className="appearance-none block w-full bg-transparent  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-first-name"
+                <input
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name"
                   type="text"
                   name="productName"
                   placeholder="Product Name"
@@ -97,7 +115,11 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Secondary Email Address*
                 </label>
-                <input className="appearance-none block w-full bg-gray-200  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name"
+                <input
+
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name"
                   type="number"
                   name="productPrice"
                   placeholder="Product Price"
@@ -112,7 +134,10 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Primary Contact No.*
                 </label>
-                <input className="appearance-none block w-full bg-transparent  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-first-name"
+                <input
+                  className="appearance-none block w-full bg-transparent
+                     border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                     leading-tight focus:outline-none" id="grid-first-name"
                   type="text"
                   name="productName"
                   placeholder="Product Name"
@@ -125,7 +150,10 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Secondary Contact No.*
                 </label>
-                <input className="appearance-none block w-full bg-gray-200  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name"
+                <input
+                  className="appearance-none block w-full bg-transparent
+                 border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                 leading-tight focus:outline-none" id="grid-first-name"
                   type="number"
                   name="productPrice"
                   placeholder="Product Price"
@@ -141,7 +169,10 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Current Location*
                 </label>
-                <input className="appearance-none block w-full bg-transparent  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-first-name"
+                <input
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name"
                   type="text"
                   name="productName"
                   placeholder="Product Name"
@@ -154,8 +185,26 @@ const Jobs = () => {
                 <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
                   Preferred Location*
                 </label>
-                <input className="appearance-none block w-full bg-gray-200  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name"
+                <input
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name" 
                   type="number"
+                  name="productPrice"
+                  placeholder="Product Price"
+
+                  required
+                />
+              </div>
+              <div className="w-full  px-3 mb-6 md:mb-0">
+                <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
+                  Share Resume*
+                </label>
+                <input
+                  className="appearance-none block w-full bg-transparent
+                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
+                  leading-tight focus:outline-none" id="grid-first-name" 
+                  type="file"
                   name="productPrice"
                   placeholder="Product Price"
 

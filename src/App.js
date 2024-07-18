@@ -11,6 +11,7 @@ import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
 import Footer from './component/footer/Footer';
 import About from './page/About/About';
+import Test from './page/Test/Test';
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/service" element={<Service />} />
           <Route path="/client" element={<OurClient />} />
           <Route path="/job" element={<Jobs />} />
+          <Route path="/test" element={<Test />} />
 
 
         </Routes>

@@ -27,7 +27,7 @@ const SliderSection = () => {
         <div className='SliderSection_container'>
             <div className='SliderSection_Main'>
                 <header className="SliderSection_header " >
-                    <h1  data-aos="fade-left" data-aos-duration="2000">Blog Section</h1>
+                    <h1 data-aos="fade-left" data-aos-duration="2000">Blog Section</h1>
                     {/* <p className='AboutSection_Underline'>---------------------------------------------</p> */}
                 </header>
                 <Swiper
@@ -45,13 +45,17 @@ const SliderSection = () => {
                             return (
                                 <SwiperSlide className='SliderSection-swiper-slide'
                                     style={{ backgroundColor: 'aliceblue' }}
-                                    data-aos="fade-left" data-aos-duration="2000"
+
                                 >
                                     <div className='SwiperSlide_Content' >
                                         <h1>{item.head}</h1>
-                                        <p>
-                                            {item.title}
-                                        </p>
+                                        
+                                        <ol type="1">
+                                            <li>{item.li1}</li>
+                                            <li>{item.li2}</li>
+                                            <li>{item.li3}</li>
+
+                                        </ol>
                                     </div>
 
                                 </SwiperSlide>

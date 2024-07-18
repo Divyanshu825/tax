@@ -2,15 +2,21 @@
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    margin-top: 4rem;
-    margin-bottom: 8rem;
+    /* padding: 40px; */
+}
+
+.Home_Faq_Main {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .Home_Faq_PName {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 2rem;
     margin-bottom: 3rem;
     font-size: 3rem;
@@ -19,6 +25,7 @@
 }
 
 .Home_Faq {
+    text-align: left;
     width: 100%;
     padding: 50px;
     max-width: 1100px;

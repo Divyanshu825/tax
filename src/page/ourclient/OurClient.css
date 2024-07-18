@@ -1,11 +1,13 @@
 .OurClient_Container {
     background-image: url('/src/Images/bgImage.jpg');
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
+    margin: 0 auto;
+    /* font-size: 16px; */
+    color: white;
 
 }
 
@@ -34,4 +36,183 @@
     align-self: center;
     margin-bottom: 2rem;
     color: aqua;
+}
+
+.OurClient_Des_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+}
+
+.OurClient_Des_head h1 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+.OurClient_Des_head h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: center;
+    align-self: center;
+    /* margin-bottom: 1rem; */
+    color: aliceblue;
+}
+
+.OurClient_Des_Content {
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    /* padding: 100px; */
+    padding: 0 100px 0 100px;
+}
+
+.main {
+    padding: 100px 90px 80px 90px;
+    background-color: rgba(235, 235, 235, 0.855);
+}
+
+.cardGrid {
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    /* place-items: center; */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    padding: 100px 90px 80px 90px;
+
+}
+
+.cardMain {
+    background-color: #fff;
+    padding: 0 0 10px 0;
+    border: 1px solid rgb(228, 228, 228);
+    min-height: 230px;
+    color: #151515;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+    /* width: 400px; */
+    height: 400px;
+}
+
+.iconView {
+    padding: 20px;
+    /* padding-left: ; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 90px;
+    /* width: 100px; */
+    transition: all ease 0.4s;
+}
+
+.title {
+    color: #151515;
+    padding: 50px 10px 10px 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.des {
+    color: #151515;
+    padding: 30px 20px 10px 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.cardMain:hover {
+    transform: translateY(-30px);
+    background-color: rgb(255, 225, 225);
+}
+
+.iconView[data-color='#079af0'] {
+    --bg-color: #079af0;
+}
+
+.iconView[data-color='#fea632'] {
+    --bg-color: #fea632;
+}
+
+.iconView[data-color='rgb(255, 72, 72)'] {
+    --bg-color: rgb(255, 72, 72);
+}
+
+.iconView[data-color='#00b072'] {
+    --bg-color: #00b072;
+}
+
+.iconView[data-color='#151515'] {
+    --bg-color: #151515;
+}
+
+/* Apply background color using CSS variables */
+.iconView {
+    background-color: var(--bg-color);
+}
+
+.cardMain:hover .iconView {
+    background-color: rgb(255, 255, 255);
+    color: #151515;
+}
+
+@media only screen and (max-width:1100px) {
+    .main {
+        padding: 60px 20px 50px 20px;
+    }
+
+}
+
+@media only screen and (max-width:559px) {
+    .main {
+        padding: 60px 20px 50px 20px;
+    }
+
+    .whyGwtHeader {
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #151515;
+    }
+
+    .title {
+        color: #151515;
+        padding: 20px 10px 10px 10px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .whyGwtText2 {
+        font-size: 13px;
+        color: rgb(114, 114, 114);
+        font-weight: lighter;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .main {
+        padding: 60px 15px 50px 15px;
+    }
+
+    .cardGrid {
+        width: 100%;
+        margin: 50px 0px 0px 0px;
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        /* place-items: center; */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
