@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import './Banner.css';
 
 // import required modules
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import BannerData from './BannerData';
 
 
@@ -21,12 +21,16 @@ const Banner = () => {
         <>
             <Swiper
                 spaceBetween={30}
-                effect={'fade'}
-                navigation={true}
-                pagination={{
-                    clickable: true,
+                centeredSlides={true}
+                autoplay={{
+                  delay: 3500,
+                  disableOnInteraction: false,
                 }}
-                modules={[EffectFade, Navigation, Pagination]}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper Banner_swiper"
             >
                 {
