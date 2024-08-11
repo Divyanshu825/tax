@@ -28,7 +28,7 @@ const ProfileCard = () => {
                     <h1 data-aos="fade-up" data-aos-duration="2000">Cards Section</h1>
                     {/* <p className='AboutSection_Underline'>---------------------------------------------</p> */}
                 </header>
-                <div className='ProfileCard_Card' data-aos="fade-up" data-aos-duration="2000">
+                {/* <div className='ProfileCard_Card' data-aos="fade-up" data-aos-duration="2000">
                     <Link to="/about">
                         <Card
                             hoverable
@@ -67,6 +67,16 @@ const ProfileCard = () => {
                             <Meta description={"JobSeeker"} style={{ fontSize: "30px", color: 'black', fontWeight: 700 }} />
                         </Card>
                     </Link>
+                </div> */}
+
+                <div className="Test_container">
+                    <img src={pic3} alt="Avatar" className="Test_image" />
+                    <div className="Test_overlay">
+                        <div className="Test_text">Hello World</div>
+                    </div>
+                </div>
+                <div style={{ backgroundColor: 'whitesmoke', width: '500px',height:'50px' }}>
+                    <h1>Hiiiii</h1>
                 </div>
             </div>
         </div>

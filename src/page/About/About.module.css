@@ -6,7 +6,6 @@
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
-
 }
 
 /* ========== list ======= */
@@ -28,7 +27,6 @@
     width: 100%;
     flex-direction: row-reverse;
     margin-bottom: 100px;
-
 }
 
 .text_container_map {

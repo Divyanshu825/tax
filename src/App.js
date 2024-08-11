@@ -11,20 +11,17 @@ import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
 import Footer from './component/footer/Footer';
 import About from './page/About/About';
-import Test from './page/Test/Test';
-
-
-
+// import Test from './page/Test/Test';
+import Test from './page/home/sections/Test/Test';
 
 const App = () => {
 
-
   return (
-    <>
+    <div>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />} />
@@ -37,7 +34,7 @@ const App = () => {
 
         <Footer />
       </Router>
-    </>
+    </div >
   );
 };
 

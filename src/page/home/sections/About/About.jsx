@@ -21,8 +21,7 @@ const About = () => {
         </header>
 
         <div className='AboutSection_Content' data-aos="zoom-in" data-aos-duration="2000">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio recusandae facere rem! Fuga culpa sunt a fugiat tenetur modi et amet obcaecati officia, vel asperiores, sed illum aperiam rem? Asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ullam sapiente aspernatur dolorum deleniti? Veritatis facere consequatur aspernatur minus odit magni iure dignissimos nobis ex doloribus! Aspernatur ab dolores natus?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio recusandae facere rem! Fuga culpa sunt a fugiat tenetur modi et amet obcaecati officia, vel asperiores, sed illum aperiam rem? Asperiores!</p>
+          <p>We are a Prime Executive Search Firm working with an objective to cater training solutions and all the end to end recruitment needs of our esteemed clients. Based at Indore, Madhya Pradesh, the company has moved up in value chain as one of the preferential recruiters, for top companies PAN India.</p>
         </div>
 
         <main>

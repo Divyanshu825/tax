@@ -6,7 +6,6 @@
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
-    /* height: 100vh; */
 }
 
 .Service_head {
@@ -39,9 +38,8 @@
 
 .Service_map_container {
     max-width: 1210px;
-    /* width: 80%; */
     flex-direction: column;
-    margin: 100px auto;
+    margin: 200px auto;
 }
 
 .Service_map_main {
@@ -97,112 +95,98 @@
 }
 
 
-.Service_right_container_3 p {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.Service_checkIcon {
-    margin-right: 10px;
-    font-size: 12px;
-}
-
-
-
 @media only screen and (max-width:1269px) {
-    .map_container {
+    .Service_map_container {
         max-width: 940px;
     }
 
-    .image_container_map {
+    .Service_image_container_map {
         max-width: 470px;
     }
 
-    .image_map {
+    .Service_image_map {
         max-width: 470px;
     }
 }
 
 @media only screen and (max-width:991px) {
-    .map_container {
+    .Service_map_container {
         max-width: 800px;
     }
 
-    .map_main {
-
+    .Service_map_main {
         justify-content: center;
         align-items: center;
     }
 
-    .map_main2 {
+    .Service_map_main2 {
         justify-content: center;
         align-items: center;
     }
 
-    .image_container_map {
+    .Service_image_container_map {
         max-width: 370px;
     }
 
-    .image_map {
+   .Service_image_map {
         max-width: 370px;
     }
 
-    .text_container_map {
+  .Service_text_container_map {
         padding: 0 20px 0 0;
         width: 50%;
     }
 
-    .text_container_map2 {
+   .Service_text_container_map2 { 
         padding: 0 0 0 20px;
         width: 50%;
     }
 }
 
 @media only screen and (max-width:960px) {
-    .Service_map_container {
+    .Ab_Service_map_container {
         max-width: 1210px;
         flex-direction: column;
         /* margin: 200px auto; */
         margin-top: 2rem;
     }
-
-    .map_main {
+    
+    .Service_map_main {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
     }
 
-    .map_main2 {
+    .Service_map_main2 {
         display: flex;
         width: 100%;
         flex-direction: column-reverse;
 
     }
 
-    .map_container {
+    .Service_map_container {
         max-width: 720px;
     }
 
-    .image_map {
+   .Service_image_map {
         max-width: 100%;
     }
 
-    .image_container_map {
+    .Service_image_container_map {
         max-width: 100%;
     }
 
-    .text_container_map {
+  .Service_text_container_map {
         padding: 30px 0px 0 0;
         width: 100%;
     }
 
-    .text_container_map2 {
+   .Service_text_container_map2 { 
         padding: 30px 0 0 0px;
         width: 100%;
     }
 
-    .map_container {
+    .Service_map_container {
 
         margin: 200px auto;
         align-items: center;
@@ -212,28 +196,28 @@
 
 @media only screen and (max-width:830px) {
 
-    .map_container {
+    .Service_map_container {
         max-width: 600px;
     }
 }
 
 @media only screen and (max-width:680px) {
 
-    .map_container {
+    .Service_map_container {
         max-width: 500px;
         margin: 50px auto;
     }
 }
 
 @media only screen and (max-width:588px) {
-    .map_container {
+    .Service_map_container {
         max-width: 400px;
     }
 }
 
 @media only screen and (max-width:422px) {
 
-    .map_container {
+    .Service_map_container {
         margin: 50px 20px;
     }
 }

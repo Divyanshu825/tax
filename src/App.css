@@ -8,3 +8,12 @@
   background-color: #0000006e;
   /* background-color: #3838386e; */
 }
+.App{
+  background-color: black;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
