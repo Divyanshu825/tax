@@ -1,53 +1,54 @@
-import React, { useEffect, useState } from "react";
-import Faq from "react-faq-component";
-import FAQS from "./FaqsList";
-import './Faq.css'
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState } from 'react';
+import './Faq.css';
 
-const styles = {
-    bgColor: 'white',
-    titleTextColor: "blue",
-    rowTitleColor: "blue",
-    rowContentColor: 'grey',
-    arrowColor: "red",
-};
+const Faq = () => {
+    const [activeIndex, setActiveIndex] = useState(null);
 
-const config = {
-    animate: true,
-    arrowIcon: "V",
-    tabFocus: true
-};
+    const faqs = [
+        {
+            question: 'What is React?',
+            answer: 'React is a JavaScript library for building user interfaces.',
+        },
+        {
+            question: 'How do you use React?',
+            answer: 'React can be used by creating components which manage their own state.',
+        },
+        {
+            question: 'Why use React?',
+            answer: 'React is used because it is fast, scalable, and simple.',
+        },
+    ];
 
-
-const Faqs = () => {
-
-    useEffect(() => {
-        AOS.init({
-            offset: 200,
-            duration: 2500,
-            easing: "ease-in-out-cubic",
-        });
-    }, []);
+    const toggleFAQ = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
 
     return (
-        <div className="Home_Faq_Container">
-            <div className='Home_Faq_Main'>
-                <div className="Home_Faq_PName">
-                    <h1 data-aos="fade-up" data-aos-duration="2000">Our services</h1>
+        <div className="faq-container">
+            {faqs.map((faq, index) => (
+                <div
+                    key={index}
+                    className={`faq-item ${activeIndex === index ? 'active' : ''}`}
+                    onClick={() => toggleFAQ(index)}
+                >
+                    <div className="faq-question">
+                        <h3>{faq.question}</h3>
+                        <span className="faq-icon">{activeIndex === index ? '-' : '+'}</span>
+                    </div>
+                    <div
+                        className="faq-answer"
+                        style={
+                            activeIndex === index
+                                ? { maxHeight: '300px', padding: '10px 0' }
+                                : { maxHeight: '0px', padding: '0' }
+                        }
+                    >
+                        <p>{faq.answer}</p>
+                    </div>
                 </div>
+            ))}
+        </div>
+    );
+};
 
-                <div className="Home_Faq" data-aos="fade-up" data-aos-duration="2000">
-                    <Faq
-                        data={FAQS}
-                        styles={styles}
-                        config={config}
-                    />
-                </div>
-            </div>
-
-        </div >
-    )
-}
-
-export default Faqs
+export default Faq;

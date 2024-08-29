@@ -11,6 +11,7 @@ import AOS from "aos";
 // import required modules
 import { Pagination } from 'swiper/modules';
 import SliderSectionData from './SliderSectionData';
+import pic3 from '../../../../Images/Logo.jpg'
 
 
 const SliderSection = () => {
@@ -45,19 +46,13 @@ const SliderSection = () => {
                             return (
                                 <SwiperSlide className='SliderSection-swiper-slide'
                                     style={{ backgroundColor: 'aliceblue' }}
-
                                 >
-                                    <div className='SwiperSlide_Content' >
-                                        <h1>{item.head}</h1>
-                                        
-                                        <ol type="1">
-                                            <li>{item.li1}</li>
-                                            <li>{item.li2}</li>
-                                            <li>{item.li3}</li>
-
-                                        </ol>
+                                    <div className="Test_container">
+                                        <img src={pic3} alt="Avatar" className="Test_image" />
+                                        <div className="Test_overlay">
+                                            <div className="Test_text">Hello World</div>
+                                        </div>
                                     </div>
-
                                 </SwiperSlide>
                             )
                         })

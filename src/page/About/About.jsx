@@ -80,7 +80,7 @@ const About = () => {
                     })}
                 </div>
                 <div className={style.About_Carousel}>
-                    <AboutCarousel/>
+                    <AboutCarousel />
                 </div>
             </div>
         </div>

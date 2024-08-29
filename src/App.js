@@ -11,8 +11,8 @@ import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
 import Footer from './component/footer/Footer';
 import About from './page/About/About';
-// import Test from './page/Test/Test';
 import Test from './page/home/sections/Test/Test';
+import Temp from './page/Test/Temp';
 
 const App = () => {
 
@@ -28,11 +28,29 @@ const App = () => {
           <Route path="/client" element={<OurClient />} />
           <Route path="/job" element={<Jobs />} />
           <Route path="/test" element={<Test />} />
-
-
+          <Route path="/test" element={<Test />} />
+          <Route path="/temp" element={<Temp />} />
         </Routes>
 
         <Footer />
+        <button
+          style={{
+            position: 'fixed',
+            bottom: 10,
+            right: 10,
+            backgroundColor: '#4277a8',
+            border: 'none',
+            boxShadow: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px',
+            borderRadius: 30,
+            padding: 12,
+            color: 'white',
+          }}
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          }}>
+            +
+          {/* <ArrowUpwardIcon /> */}
+        </button>
       </Router>
     </div >
   );

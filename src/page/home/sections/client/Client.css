@@ -1,0 +1,129 @@
+/* TextCarousel.css */
+.text-carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    /* Maximum width to prevent it from becoming too large */
+    margin: 0 auto;
+    height: 1000px;
+}
+
+.Client_Head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    /* Adjusted font size for responsiveness */
+    font-weight: 700;
+    color: #f4f4f4;
+    margin-bottom: 4rem;
+    /* Reduced margin for smaller screens */
+}
+
+.text-carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    /* Adjust height as needed */
+    background: #f4f4f4;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    padding: 10px;
+    /* Adjust padding for smaller screens */
+}
+
+.text-carousel-item p {
+    font-size: 1.5rem;
+    /* Adjust font size for responsiveness */
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    /* Adjust padding for smaller screens */
+}
+
+.service_list_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #f4f4f4;
+    font-size: 1.5rem;
+    /* Adjusted font size for responsiveness */
+    margin-top: 6rem;
+    /* Reduced margin for smaller screens */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Client_Head {
+        font-size: 2rem;
+        /* Smaller font size for tablets and smaller screens */
+        margin-bottom: 1.5rem;
+        /* Adjust margin */
+    }
+
+    .text-carousel-item {
+        height: 150px;
+        /* Reduced height for smaller screens */
+        padding: 5px;
+        /* Reduced padding */
+    }
+
+    .text-carousel-item p {
+        font-size: 1.25rem;
+        /* Smaller font size for smaller screens */
+        padding: 5px;
+        /* Reduced padding */
+    }
+
+    .service_list_container {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        font-size: 1.25rem;
+        /* Adjusted font size for smaller screens */
+        margin-top: 1.5rem;
+        /* Reduced margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .Client_Head {
+        font-size: 1.5rem;
+        /* Smaller font size for mobile screens */
+        margin-bottom: 1rem;
+        /* Adjust margin */
+    }
+
+    .service_list_first {
+        padding: 20px 10px;
+    }
+
+    .service_list_second {
+        padding: 20px 10px;
+    }
+
+    .service_list_third {
+        padding: 20px 10px;
+    }
+
+    .text-carousel-item {
+        height: 120px;
+        /* Further reduced height for mobile screens */
+    }
+
+    .text-carousel-item p {
+        font-size: 1rem;
+        /* Smaller font size for mobile screens */
+        padding: 2px;
+        /* Further reduced padding */
+    }
+
+    .service_list_container {
+        font-size: 1rem;
+        /* Smaller font size for mobile screens */
+        margin-top: 1rem;
+        /* Reduced margin */
+    }
+}

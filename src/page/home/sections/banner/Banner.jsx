@@ -1,53 +1,49 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-import './Banner.css';
-
-// import required modules
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
-import BannerData from './BannerData';
-
-
-const Banner = () => {
-
-    return (
-        <>
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                  delay: 3500,
-                  disableOnInteraction: false,
-                }}
-                pagination={{
-                  clickable: true,
-                }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper Banner_swiper"
-            >
-                {
-                    BannerData.map((item) => {
-                        return (
-                            <SwiperSlide className='Banner_swiper-slide'>
-                                <p className='content'>{item.title}</p>
-                                <img src={item.img} />
-                            </SwiperSlide>
-                        )
-                    })
-                }
-
-
-            </Swiper>
-        </>
-    );
+const spanStyle = {
+  padding: '20px',
+  background: '#efefef',
+  color: '#000000'
 }
 
+const divStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundSize: 'cover',
+  height: '50rem'
+}
+
+const slideImages = [
+  {
+    url: 'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+    caption: 'Hiii Job Sekeers'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
+    caption: 'Can You Find Job'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+    caption: 'Slide 3'
+  },
+];
+
+const Banner = () => {
+  return (
+    <div className="slide-container">
+      <Slide>
+        {slideImages.map((slideImage, index) => (
+          <div key={index} style={{height:'50rem'}}>
+            <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
+              <span style={spanStyle}>{slideImage.caption}</span>
+            </div>
+          </div>
+        ))}
+      </Slide>
+    </div>
+  )
+}
 export default Banner

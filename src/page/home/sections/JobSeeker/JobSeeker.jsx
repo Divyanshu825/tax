@@ -22,7 +22,7 @@ const JobSeeker = () => {
                 <div className='AboutSection_Content' data-aos="zoom-in" data-aos-duration="2000">
                     <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
                 </div>
-                <Swiper
+                {/* <Swiper
                     slidesPerView={3}
                     grid={{
                         rows: 2,
@@ -44,7 +44,7 @@ const JobSeeker = () => {
                     <SwiperSlide className='JobSeeker_swiper-slide '>Slide 8</SwiperSlide>
                     <SwiperSlide className='JobSeeker_swiper-slide '>Slide 9</SwiperSlide>
                     <SwiperSlide className='JobSeeker_swiper-slide '>Slide 10</SwiperSlide>
-                </Swiper>
+                </Swiper> */}
             </div>
         </div>
     )

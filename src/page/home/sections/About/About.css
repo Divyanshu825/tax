@@ -4,6 +4,7 @@
     margin: 0 auto;
     flex-direction: column;
     padding: 40px;
+    max-width: 1200px;
 }
 
 .AboutSection_Main {
@@ -11,6 +12,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .AboutSection_header {
@@ -36,7 +38,6 @@
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
-
 }
 
 main {
@@ -46,6 +47,7 @@ main {
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
+    padding: 20px;
 }
 
 .info-section {
@@ -54,4 +56,93 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+/* CSS for count animation */
+.count {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    transition: opacity 1s ease, transform 1s ease;
+    /* Slower transition */
+}
+
+/* Animation for count visibility */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation when element is visible */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: countUp 2s ease-out forwards;
+    /* Slower animation */
+}
+
+@media (max-width: 768px) {
+    .AboutSection_Container {
+        padding: 20px;
+    }
+
+    .AboutSection_header h1 {
+        font-size: 2rem;
+    }
+
+    .AboutSection_Underline {
+        font-size: 1.5rem;
+    }
+
+    .AboutSection_Content {
+        font-size: 1.15rem;
+    }
+
+    main {
+        justify-content: center;
+    }
+
+    .info-section {
+        width: calc(50% - 20px);
+        /* Width with margin accounted */
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .AboutSection_Container {
+        padding: 1px;
+        /* Reduced padding */
+    }
+
+    .AboutSection_header h1 {
+        font-size: 1.75rem;
+    }
+
+    .AboutSection_Underline {
+        font-size: 1.25rem;
+    }
+
+    .AboutSection_Content {
+        font-size: 1rem;
+    }
+
+    main {
+        justify-content: center;
+    }
+
+    .info-section {
+        width: calc(50% - 10px);
+        /* Increased width by reducing margin */
+        margin: 5px;
+        /* Reduced margin to increase card width */
+    }
 }
