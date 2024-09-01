@@ -17,6 +17,18 @@ const Ourservices = () => {
             question: 'Why use React?',
             answer: 'React is used because it is fast, scalable, and simple.',
         },
+        {
+            question: 'What is React?',
+            answer: 'React is a JavaScript library for building user interfaces.',
+        },
+        {
+            question: 'How do you use React?',
+            answer: 'React can be used by creating components which manage their own state.',
+        },
+        {
+            question: 'Why use React?',
+            answer: 'React is used because it is fast, scalable, and simple.',
+        },
     ];
 
     const toggleFAQ = (index) => {
@@ -25,9 +37,11 @@ const Ourservices = () => {
 
     return (
         <div className='Ourservices_container'>
-            <div className="Client_Head">
-                <h1>Our Services</h1>
-            </div>
+            <header className="Ourservices_header" >
+                <h1 data-aos="zoom-in" data-aos-duration="2000">Our Services</h1>
+                {/* <p className='JobSeeker_Underline'>---------------------------------------------</p> */}
+            </header>
+            
             <div className="Ourservices_faq-container">
 
                 {faqs.map((faq, index) => (
@@ -37,7 +51,7 @@ const Ourservices = () => {
                         onClick={() => toggleFAQ(index)}
                     >
                         <div className="Ourservices_faq-question">
-                            <h3>{faq.question}</h3>
+                            <h2>{faq.question}</h2>
                             <span className="Ourservices_faq-icon">{activeIndex === index ? '-' : '+'}</span>
                         </div>
                         <div

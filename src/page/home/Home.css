@@ -1,5 +1,6 @@
 .home{
-    background-image: url("/src/Images/bgImage.jpg");
+    /* background-image: url("/src/Images/bgImage.jpg"); */
+    background-color: aliceblue;
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;

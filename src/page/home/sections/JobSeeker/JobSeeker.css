@@ -1,15 +1,15 @@
 /* App.css */
 .JobSeeker_Container {
     display: flex;
-    margin: 0 auto;
+    margin: 3rem auto;
     flex-direction: column;
-    /* padding: 40px; */
 }
 
 .JobSeeker_Main {
     text-align: center;
-    min-height: 50vh;
+    /* min-height: 50vh; */
     display: flex;
+    margin-bottom: 3rem;
     flex-direction: column;
 }
 
@@ -28,7 +28,7 @@
     margin: 0;
     font-size: 3rem;
     font-weight: 700;
-    color: #fff;
+    color: #000;
     margin-bottom: 2rem;
 }
 

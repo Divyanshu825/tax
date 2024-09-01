@@ -25,9 +25,11 @@ const Client = () => {
 
   return (
     <div className="text-carousel-container">
-      <div className="Client_Head">
-        <h1>Clientele</h1>
-      </div>
+      <header className="Client_header" >
+        <h1 data-aos="zoom-in" data-aos-duration="2000">Clientele</h1>
+        {/* <p className='JobSeeker_Underline'>---------------------------------------------</p> */}
+      </header>
+
       <Slider {...settings}>
         {items.map((text, index) => (
           <div key={index} className="text-carousel-item">

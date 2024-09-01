@@ -17,20 +17,20 @@ const Home = forwardRef((props, ref) => {
     return (
         <div className='home' id="home-section" ref={ref}>
             <Banner />
-            <div className='Overlay_Pages'>
-                <div className='Overlay'>
-                    <Cards />
-                    <Description />
-                    <Faqs />
-                    <About />
-                    <Client />
-                    {/* <SliderSection /> */}
-                    <JobSeeker />
-                    <Ourservices />
-                    <Blogs />
-                    <GoogleMap />
-                </div>
-            </div>
+            {/* <div className='Overlay_Pages'>
+                <div className='Overlay'> */}
+            <Cards />
+            <Description />
+            <Faqs />
+            <About />
+            <Client />
+            {/* <SliderSection /> */}
+            <JobSeeker />
+            <Ourservices />
+            <Blogs />
+            <GoogleMap />
+            {/* </div>
+            </div> */}
         </div>
     )
 })

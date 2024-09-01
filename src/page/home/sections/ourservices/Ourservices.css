@@ -1,9 +1,25 @@
 .Ourservices_faq-container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 3rem auto;
     padding: 20px;
     background-color: aliceblue;
     border-radius: 10px;
+}
+
+.Ourservices_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0 20px 0 20px;
+}
+
+.Ourservices_header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2rem;
 }
 
 .Ourservices_faq-item {
@@ -13,8 +29,13 @@
     transition: all 0.3s ease;
 }
 
+.Ourservices_faq-item h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
 .Ourservices_faq-item.active {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
 }
 
 .Ourservices_faq-question {
@@ -24,7 +45,7 @@
 }
 
 .Ourservices_faq-icon {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .Ourservices_faq-answer {
