@@ -14,19 +14,23 @@ import { Grid, Pagination } from 'swiper/modules';
 const JobSeeker = () => {
     return (
         <div className="JobSeeker_Container">
-            <div className='JobSeeker_Main'>
-                <header className="JobSeeker_header " >
-                    <h1 data-aos="zoom-in" data-aos-duration="2000" >Job Seeker </h1>
-                    {/* <p className='JobSeeker_Underline'>---------------------------------------------</p> */}
-                </header>
-                <div className='AboutSection_Content' data-aos="zoom-in" data-aos-duration="2000">
-                    <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
-                    <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
-                    <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
-                    <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
-                    <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
-                </div>
+            <div className="JobSeeker_overLay">
+                <div className="JobSeeker_overLay">
+                    <div className='JobSeeker_Main'>
+                        <header className="JobSeeker_header " >
+                            <h1 data-aos="zoom-in" data-aos-duration="2000" >Job Seeker </h1>
+                            <p></p>
+                        </header>
+                        <div className='JobSeeker_Content' data-aos="zoom-in" data-aos-duration="2000">
+                            <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
+                            <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
+                            <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
+                            <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
+                            <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
+                        </div>
 
+                    </div>
+                </div>
             </div>
         </div>
     )

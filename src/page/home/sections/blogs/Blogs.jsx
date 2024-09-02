@@ -19,12 +19,12 @@ const Blogs = () => {
   const card = [
     {
       title: 'Card 1',
-      description: 'This is the first card',
+      description: 'संगीता गुप्ता बहुत प्यारी है I LOVE YOU ❤️',
       image: pic,
     },
     {
       title: 'Card 2',
-      description: 'This is the second card',
+      description: 'संगीता गुप्ता बहुत प्यारी है',
       image: pic1,
     },
     {
@@ -35,26 +35,30 @@ const Blogs = () => {
   ];
 
   return (
-    // <div className="blogs_container">
-      <div className="blogs_card-slider">
+    <div className="blogs_container">
+      <header className="blogs_header " >
+        <h1 data-aos="zoom-in" data-aos-duration="2000" >Latest Blogs</h1>
+        <p></p>
+      </header>
+      <div className="Blogs_card-slider">
+
         {/* Large screens: Show cards directly */}
-        <div className="blogs_desktop-cards">
+
+        <div className="Blogs_desktop-cards">
           {card.map((card, index) => (
-            <div key={index} className="blogs_card">
-              <div className="blogs_card-image">
+            <div key={index} className="Blogs_card">
+              <div className="Blogs_card-image">
                 <img src={card.image} alt={card.title} />
-                <div className="blogs_overlay">
-                  <div className="blogs_overlay-text">
+                <div className="Blogs_overlay">
+                  <div className="Blogs_overlay-text">
                     <h3>{card.title}</h3>
                     <p>{card.description}</p>
                   </div>
                 </div>
               </div>
-              <div className='blogs_bottom'>
-                <p>What We are capableto usuall</p>
-              </div>
-              <div className="blogs_description">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ratione expedita minima asperiores, voluptate optio ea, soluta temporibus velit molestias quidem corporis ex possimus eaque? Minima pariatur optio obcaecati dolorum!</p>
+              <h2>Learn more from our Latest News</h2>
+              <div className='Blogs_bottom'>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quidem recusandae voluptate! Sed velit recusandae, ullam rem ratione sequi fuga, nulla quam suscipit natus, id in numquam corporis omnis harum?</p>
                 <button>Read More</button>
               </div>
             </div>
@@ -62,24 +66,24 @@ const Blogs = () => {
         </div>
 
         {/* Small screens: Show cards in slider */}
-        <div className="blogs_mobile-slider">
+
+        <div className="mobile-slider">
           <Slider {...settings}>
             {card.map((card, index) => (
-              <div key={index} className="blogs_card">
-                <div className="blogs_card-image">
+              <div key={index} className="Blogs_card">
+                <div className="Blogs_card-image">
                   <img src={card.image} alt={card.title} />
-                  <div className="blogs_overlay">
-                    <div className="blogs_overlay-text">
+                  <div className="Blogs_overlay">
+                    <div className="Blogs_overlay-text">
                       <h3>{card.title}</h3>
                       <p>{card.description}</p>
                     </div>
+
                   </div>
                 </div>
-                <div className='blogs_bottom'>
-                  <p>What We are capableto usuall</p>
-                </div>
-                <div className="blogs_description">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ratione expedita minima asperiores, voluptate optio ea, soluta temporibus velit molestias quidem corporis ex possimus eaque? Minima pariatur optio obcaecati dolorum!</p>
+                <h2>Learn more from our Latest News</h2>
+                <div className='Blogs_bottom'>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sed explicabo soluta quibusdam, praesentium debitis nam officiis, quam labore id sunt saepe sint, ab commodi amet nobis perspiciatis necessitatibus. Assumenda.</p>
                   <button>Read More</button>
                 </div>
               </div>
@@ -87,8 +91,7 @@ const Blogs = () => {
           </Slider>
         </div>
       </div>
-    // </div>
-
+    </div>
   );
 };
 

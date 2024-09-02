@@ -1,6 +1,7 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
+import './Banner.css';
 
 const spanStyle = {
   padding: '20px',
@@ -13,7 +14,7 @@ const divStyle = {
   alignItems: 'center',
   justifyContent: 'center',
   backgroundSize: 'cover',
-  height: '50rem'
+  height: '20rem'
 }
 
 const slideImages = [
@@ -36,9 +37,9 @@ const Banner = () => {
     <div className="slide-container">
       <Slide>
         {slideImages.map((slideImage, index) => (
-          <div key={index} style={{height:'50rem'}}>
-            <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-              <span style={spanStyle}>{slideImage.caption}</span>
+          <div key={index} >
+            <div className='divStyle' style={{ 'backgroundImage': `url(${slideImage.url})` }}>
+              <span className='spanStyle'>{slideImage.caption}</span>
             </div>
           </div>
         ))}

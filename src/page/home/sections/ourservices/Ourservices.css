@@ -7,11 +7,13 @@
 }
 
 .Ourservices_header {
+    margin-top: 3rem;
+    background-color: transparent;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
-    padding: 0 20px 0 20px;
+    flex-direction: column;
 }
 
 .Ourservices_header h1 {
@@ -20,6 +22,17 @@
     font-weight: 700;
     color: #000;
     margin-bottom: 2rem;
+}
+
+.Ourservices_header p {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    margin-bottom: 2rem;
+    width: 300px;
+    height: 5px;
 }
 
 .Ourservices_faq-item {
@@ -64,11 +77,27 @@
         padding: 10px;
     }
 
+    .Ourservices_header p {
+        width: 180px;
+        height: 3px;
+    }
+
     .Ourservices_faq-item {
         padding: 8px 0;
     }
 
     .Ourservices_faq-answer {
         padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Ourservices_faq-container {
+        padding: 10px;
+    }
+
+    .Ourservices_header p {
+        width: 150px;
+        height: 3px;
     }
 }

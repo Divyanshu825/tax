@@ -1,64 +1,76 @@
-/* App.css */
 .AboutSection_Container {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 3rem auto;
-    width: 100%;
+    /* background-color: blue; */
     background-image: url('/src/Images/bgImage.jpg');
+    min-height: 20vh;
     flex-direction: column;
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
-
-
 }
 
 .AboutSection_overLay {
-    background-color: #151515d1;
+    background-color: #0000006e;
 }
 
 .AboutSection_Main {
-    
+    max-width: 1600px;
     text-align: center;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .AboutSection_header {
+    margin-top: 3rem;
+  
     background-color: transparent;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.AboutSection_Underline {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 2rem;
-}
 
 .AboutSection_header h1 {
     margin: 0;
     font-size: 3rem;
     font-weight: 700;
-    color: #000;
+    color: #fff;
     margin-bottom: 2rem;
 }
 
+.AboutSection_header p {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    margin-bottom: 2rem;
+    width: 300px;
+    height: 5px;
+}
+
 .AboutSection_Content {
-    color: #333;
+    color: #fff;
     font-size: 1.5rem;
     text-align: center;
+    padding: 20px 200px;
 }
 
 main {
-    max-width: 1200px;
+    padding: 60px 200px;
+    /* padding: 200px; */
     flex-grow: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    padding: 20px;
 }
 
 .info-section {
@@ -70,16 +82,13 @@ main {
     margin: 10px;
 }
 
-/* CSS for count animation */
 .count {
     font-size: 2rem;
     font-weight: bold;
     color: #333;
     transition: opacity 1s ease, transform 1s ease;
-    /* Slower transition */
 }
 
-/* Animation for count visibility */
 @keyframes countUp {
     from {
         opacity: 0;
@@ -92,12 +101,10 @@ main {
     }
 }
 
-/* Apply animation when element is visible */
 [data-aos="fade-up"] {
     opacity: 0;
     transform: translateY(20px);
     animation: countUp 2s ease-out forwards;
-    /* Slower animation */
 }
 
 @media (max-width: 768px) {
@@ -106,24 +113,34 @@ main {
     }
 
     .AboutSection_header h1 {
-        font-size: 2rem;
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 2rem;
     }
 
     .AboutSection_Underline {
         font-size: 1.5rem;
     }
 
+    .AboutSection_header p {
+        width: 180px;
+        height: 3px;
+    }
+
     .AboutSection_Content {
+        padding: 10px;
         font-size: 1.15rem;
     }
 
     main {
         justify-content: center;
+        padding: 20px;
     }
 
     .info-section {
         width: calc(50% - 20px);
-        /* Width with margin accounted */
         margin: 10px;
     }
 }
@@ -131,15 +148,19 @@ main {
 @media (max-width: 480px) {
     .AboutSection_Container {
         padding: 1px;
-        /* Reduced padding */
     }
 
     .AboutSection_header h1 {
-        font-size: 1.75rem;
+        font-size: 2.5rem;
     }
 
     .AboutSection_Underline {
         font-size: 1.25rem;
+    }
+
+    .AboutSection_header p {
+        width: 150px;
+        height: 3px;
     }
 
     .AboutSection_Content {
@@ -148,12 +169,11 @@ main {
 
     main {
         justify-content: center;
+        padding: 20px;
     }
 
     .info-section {
         width: calc(50% - 10px);
-        /* Increased width by reducing margin */
         margin: 5px;
-        /* Reduced margin to increase card width */
     }
 }

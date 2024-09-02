@@ -1,13 +1,20 @@
 /* TextCarousel.css */
 .text-carousel-container {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: burlywood;
+    /* margin-top: -50px; */
+}
+
+.text-carousel-main {
     max-width: 1200px;
     /* Maximum width to prevent it from becoming too large */
     margin: 0 auto;
-    height: 900px;
+   
+    /* background-color: antiquewhite; */
 }
 
-/* .Client_Head {
+/* .Client_header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +29,7 @@
 .Client_header {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: transparent;
     padding: 0 20px 0 20px;
@@ -35,28 +43,40 @@
     margin-bottom: 2rem;
 }
 
+.Client_header p {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    margin-bottom: 2rem;
+    width: 250px;
+    height: 5px;
+}
+
 .text-carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    /* Adjust height as needed */
-    background: #f4f4f4;
-    border-radius: 10px;
-    /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Shadow effect */
-    padding: 10px;
-    /* Adjust padding for smaller screens */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 200px !important;
+    background: #f4f4f4 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 10px !important;
+    text-align: center !important;
 }
 
 .text-carousel-item p {
-    font-size: 1.5rem;
-    /* Adjust font size for responsiveness */
-    color: #333;
-    text-align: center;
-    padding: 10px;
-    /* Adjust padding for smaller screens */
+    font-size: 1.5rem !important;
+    color: #333 !important;
+    padding: 10px !important;
+    margin: 0 !important;
+}
+
+.text-carousel-item img {
+    height: 40px !important;
+    margin-bottom: 10px !important;
 }
 
 .service_list_container {
@@ -79,7 +99,7 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .text-carousel-container {
+    .text-carousel-main {
         width: 100%;
         max-width: 1200px;
         /* Maximum width to prevent it from becoming too large */
@@ -87,11 +107,16 @@
         height: 1000px;
     }
 
-    .Client_Head {
+    .Client_header {
         font-size: 2rem;
         /* Smaller font size for tablets and smaller screens */
         margin-bottom: 1.5rem;
         /* Adjust margin */
+    }
+
+    .Client_header p {
+        width: 250px;
+        height: 3px;
     }
 
     .text-carousel-item {
@@ -119,19 +144,24 @@
 }
 
 @media (max-width: 480px) {
-    .text-carousel-container {
+    .text-carousel-main {
         width: 100%;
         max-width: 1200px;
         /* Maximum width to prevent it from becoming too large */
         margin: 0 auto;
-        height: 1000px;
+        height: 1200px;
     }
 
-    .Client_Head {
+    .Client_header {
         font-size: 1.5rem;
         /* Smaller font size for mobile screens */
         margin-bottom: 1rem;
         /* Adjust margin */
+    }
+
+    .Client_header p {
+        width: 200px;
+        height: 3px;
     }
 
     .service_list_first {

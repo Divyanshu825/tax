@@ -1,37 +1,24 @@
-.Banner_swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.Banner_swiper-slide {
-    background-position: center;
-    background-size: cover;
-    height: 800px;
-}
-
-.Banner_swiper-slide img {
-    display: block;
-    width: 100%;
-}
-
-.content {
-    position: absolute;
-    height: 60%;
-    width: 100%;
-    top: 4rem;
+.divStyle {
     display: flex;
-    flex-direction: column;
-    
-    /* left Side me karne ke liye */
-
-    /* justify-content: center;
-    align-items: start; */
-    
     justify-content: center;
-    align-items: center; 
-    color: pink;
-    font-weight: 600;
-    margin-left: 20px;
-    font-size: 50px;
-    left: 40px;
+    align-items: center;
+    height: 40rem;
+}
+
+.spanStyle {
+    padding: 20px;
+    background: #efefef;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .divStyle {
+        height: 32rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .divStyle {
+        height: 32rem;
+    }
 }
