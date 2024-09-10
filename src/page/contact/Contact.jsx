@@ -1,10 +1,78 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ContactAnimation from '../../component/Animation/ContactAnimation'
 import './Contact.css';
+import AOS from 'aos';
 import { Stack } from '@mui/material';
+import { toast, ToastContainer } from 'react-toastify';
+import { addDoc, collection, Timestamp } from 'firebase/firestore';
+import { firdb } from '../../firebase';
+import emailjs from '@emailjs/browser';
+
 
 
 const Contact = () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobileno, setMobileno] = useState("");
+  const [city, setCity] = useState("")
+  const [state, setState] = useState("");
+  const [message, setMessage] = useState("");
+
+  console.log(firstname)
+
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 3000,
+      easing: "ease-in-out-cubic",
+    });
+  }, []);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_zojlzo8', 'template_95yw7pm', form.current, {
+      publicKey: 'MYkX4wUDf_GoHKvjW',
+    })
+  };
+
+  const putData = async () => {
+    console.log("Hii")
+    if (firstname === "" || lastname === "" || email === "" || mobileno === "") {
+      return toast.error("All fields are required")
+    }
+
+
+    try {
+      const contact = {
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        mobileno: mobileno,
+        city: city,
+        state: state,
+        message: message,
+        time: Timestamp.now()
+      }
+      console.log("Contact", contact);
+      const contactRef = collection(firdb, "contact")
+      console.log("CR", contactRef)
+      await addDoc(contactRef, contact);
+      toast.success("Thanks For Contact Us")
+      setFirstname("");
+      setLastname("");
+      setEmail("");
+      setMobileno("");
+      setCity("");
+      setState("");
+      setMessage("");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div className='Contact_Container'>
 
@@ -69,157 +137,77 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* <div className="Overlay_Pages"> */}
       <div className="Overlay">
         <div className="Overlay">
-          <Stack
-            sx={{
-              // backgroundColor: 'whitesmoke',
-              padding: 5,
-              // boxShadow: `rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px`,
-            }}
-          >
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <ContactAnimation />
-              </div>
-
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-
-                <div>
-                  <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
-                    First name*
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-transparent
-                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
-                  leading-tight focus:outline-none" id="grid-first-name"
-                    type="text"
-                    name="productName"
-                    placeholder="Product Name"
-
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
-                    Last name*
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-transparent
-                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
-                  leading-tight focus:outline-none" id="grid-first-name"
-                    type="number"
-                    name="productPrice"
-                    placeholder="Product Price"
-
-                    required
-                  />
-                </div>
-
-
-                <div>
-                  <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
-                    Email*
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-transparent
-                  border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
-                  leading-tight focus:outline-none" id="grid-first-name"
-                    type="number"
-                    name="productPrice"
-                    placeholder="Product Price"
-
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
-                    Mobile Number*
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-transparent
-                 border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
-                 leading-tight focus:outline-none" id="grid-first-name"
-                    type="number"
-                    name="productPrice"
-                    placeholder="Product Price"
-
-                    required
-                  />
-                </div>
-
-
-                <div>
-
-                  <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
-                    City*
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-transparent
-                 border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
-                 leading-tight focus:outline-none" id="grid-first-name"
-                    type="number"
-                    name="productPrice"
-                    placeholder="Product Price"
-
-                    required
-                  />
-                </div>
-
-
-                <div>
-                  <label className="block font-semibold leading-6 text-xl text-white mb-2">
-                    State
-                  </label>
-                  <div className="relative">
-                    <select className="appearance-none block w-full bg-transparent
-                 border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
-                 leading-tight focus:outline-none" id="grid-state"
-                      // value={state}
-                      name='user_state'
-                    // onChange={(e) => setState(e.target.value)}
-                    >
-                      <option className='text-black' value="" disabled>Select a state</option>
-                      <option className='text-black' value="Madhya Pradesh">Madhya Pradesh</option>
-                      <option className='text-black' value="Uttar Pradesh">Uttar Pradesh</option>
-                      <option className='text-black' value="Gujrat">Gujarat</option>
-                      <option className='text-black' value="Rajasthan">Rajasthan</option>
-                      <option className='text-black' value="Maharashtra">Maharashtra</option>
-                      <option className='text-black' value="Jharkhand">Jharkhand</option>
-                      <option className='text-black' value="Himachal Pradesh">Himachal Pradesh</option>
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                      <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div>
-                  <label className="block uppercase tracking-wide  text-xl font-semibold mb-2 text-white" for="grid-first-name">
-                    Message*
-                  </label>
-
-                  <textarea
-                    className="appearance-none block w-full bg-transparent
-                    border border-gray-200 rounded text-white py-5 px-6 mb-5  text-2xl
-                    leading-tight focus:outline-none" id="grid-first-name"
-                    type="text"
-                    name="productPrice"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-
-              </div>
+          <div className="form_container">
+            <div className="form_left">
+              {/* <ContactAnimation /> */}
             </div>
-          </Stack>
+
+            <div className="form_right">
+              <form ref={form} onSubmit={sendEmail}>
+                <div className='form_main'>
+                  <h1>First Name</h1>
+                  <input type="text"
+                    name="firstname"
+                    placeholder=' Enter Firstname'
+                    value={firstname}
+                    onChange={(e) => setFirstname(e.target.value)}
+                    required
+                  />
+                </div>
+
+                <div className='form_main'>
+                  <h1>Last Name</h1>
+                  <input type="text"
+                    name="lastname"
+                    placeholder="Enter Last Name"
+                    value={lastname}
+                    onChange={(e) => setLastname(e.target.value)}
+                    required
+                  />
+                </div>
+
+                <div className='form_main'>
+                  <h1>Email</h1>
+                  <input type="text"
+                    placeholder=' Enter Email'
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+
+                <div className='form_main'>
+                  <h1>Number</h1>
+                  <input type="number"
+                    name="mobileno"
+                    placeholder="Enter Mobile Number"
+                    value={mobileno}
+                    onChange={(e) => setMobileno(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='form_main'>
+                  <h1>Message</h1>
+                  <textarea type="text" placeholder='Enter Message' cols={50} rows={5}
+                    name="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='form_main'>
+                  <button type="submit" onClick={putData} >Send</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
         </div>
-        {/* </div> */}
-      </div >
+      </div>
+
     </div >
   )
 }
