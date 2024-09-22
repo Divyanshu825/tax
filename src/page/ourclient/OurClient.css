@@ -22,7 +22,6 @@
     margin-top: 2rem;
     font-size: 2rem;
     font-weight: 700;
-    justify-content: center;
     align-self: center;
     margin-bottom: 1rem;
     color: #000;
@@ -31,7 +30,6 @@
 .OurClient_head h2 {
     font-size: 1.2rem;
     font-weight: 500;
-    justify-content: center;
     align-self: center;
     margin-bottom: 2rem;
     color: #000;
@@ -196,6 +194,25 @@
     .OurClient_main {
         width: 90%;
         /* Adjust width to fit smaller screens */
+    }
+
+    .OurClient_head {
+        padding: 1rem;
+        /* Reduce padding on mobile */
+    }
+
+    .OurClient_head h1 {
+        font-size: 1.5rem;
+        /* Adjust font size for mobile */
+        margin-top: 1rem;
+        /* Adjust top margin */
+    }
+
+    .OurClient_head h2 {
+        font-size: 1rem;
+        /* Adjust font size for mobile */
+        margin-bottom: 1rem;
+        /* Adjust bottom margin */
     }
 
     .OurClient_Des_head h1 {
