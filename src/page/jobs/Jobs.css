@@ -44,7 +44,82 @@
     background-color: #0000006e;
 }
 
+.Job_Center {
+    background-color: #0000006e;
+    /* padding-bottom: 5rem; */
+}
+
+.Job_Center2 {
+    width: 100%;
+    display: flex;
+    padding-bottom: 6rem;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background-color: #0000006e;
+}
+
+.Job_Center3 {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    justify-content: center;
+    align-self: center;
+    /* background-color: #fea632; */
+}
+
+
+.Job_Des_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.Job_Des_head h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.Job_Des_head h2 {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    align-self: center;
+    color: #fff;
+}
+
+.Job_Des_Content {
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
 @media (max-width: 768px) {
+    .Job_Center3 {
+        width: 90%;
+        /* Adjust width to fit smaller screens */
+    }
+
+    .Job_Des_head h1 {
+        font-size: 1.8rem;
+        /* Smaller font size for tablets */
+    }
+
+    .Job_Des_head h2 {
+        font-size: 0.9rem;
+        /* Slightly smaller on tablets */
+    }
+
     .Jobs_head {
         padding: 1rem;
         /* Reduce padding on mobile */
@@ -62,5 +137,28 @@
         /* Adjust font size for mobile */
         margin-bottom: 1rem;
         /* Adjust bottom margin */
+    }
+
+    .Job_Des_Content {
+        font-size: 1.3rem;
+        /* Adjust text size for smaller screens */
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .Job_Des_head h1 {
+        font-size: 1.5rem;
+        /* Even smaller font size for mobile */
+    }
+
+    .Job_Des_head h2 {
+        font-size: 0.8rem;
+        /* Adjust for mobile */
+    }
+
+    .Job_Des_Content {
+        font-size: 1.1rem;
+        /* Even smaller text size for mobile */
     }
 }

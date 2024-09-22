@@ -69,8 +69,24 @@ const Jobs = () => {
         <h2>Home / Job Seekers</h2>
       </div>
 
+      <div className='Job_Center'>
+        <div className='Job_Center2'>
+          <div className='Job_Center3'>
+            <div className='Job_Des_head'>
+              {/* <h2>HERE’S THE LIST OF OUR VALUABLE CLIENTS</h2> */}
+              <h1>Dear Job Seekers</h1>
+            </div>
+            <div className='Job_Des_Content' >
+              <p>Please post your updated resume here, for the current and / or future openings with our client companies. We maintain our separate in-house database of resumes of all categories.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className='Job_Main'>
         <div className='Job_Main2'>
+
           <Stack
             sx={{
               // backgroundColor: 'whitesmoke',
