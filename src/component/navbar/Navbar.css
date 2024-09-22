@@ -63,12 +63,13 @@ header {
 }
 
 .action_btn:hover {
-  scale: 1.05;
+  /* scale: 1.05; */
   color: #fff;
 }
 
 .action_btn:active {
   scale: 0.95;
+  color: #fff;
 }
 
 .toggle_btn {
@@ -88,7 +89,7 @@ header {
   right: 2rem;
   /* background: rgba(0, 0, 0, 0.1); */
   top: 105px;
-  height: 260px;
+  height: 360px;
   width: 320px;
   background-color: #000;
   /* backdrop-filter: blur(18px); */
@@ -112,8 +113,7 @@ header {
 
 .dropdown_menu li:hover {
   scale: 1;
-  color: #fff;
-  background-color: aqua;
+  color: orange;
 }
 
 .dropdown_menu .action_btn {

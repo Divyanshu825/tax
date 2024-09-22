@@ -35,11 +35,37 @@ const Navbar = () => {
             </div>
             {isOpen && (
                 <div className="dropdown_menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/service">Service</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/" className="action_btn">Get Started</a></li>
+                    <a href="/"><li>Home</li></a>
+                    <a href="/about">
+                        <li>
+                            About
+                        </li>
+                    </a>
+                    <a href="/service">
+                        <li>
+                            Service
+                        </li>
+                    </a>
+                    <a href="/client">
+                        <li>
+                            OurClient
+                        </li>
+                    </a>
+                    <a href="/job">
+                        <li>
+                            Jobs
+                        </li>
+                    </a>
+                    <a href="/contact">
+                        <li>
+                            Contact
+                        </li>
+                    </a>
+                    <a href="/" className="action_btn">
+                        <li>
+                            Get Started
+                        </li>
+                    </a>
                 </div>
             )}
         </header>

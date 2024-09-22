@@ -1,10 +1,12 @@
 .GoogleMap_container {
-    width: 100%;
-    background-image: url('/src/Images/bgImage.jpg');
     display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    background-image: url('/src/Images/bgImage.jpg');
+    min-height: 50vh;
     flex-direction: column;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
 }
 
@@ -16,7 +18,7 @@
     padding: 50px;
     text-align: center;
     display: flex;
-    height: 600px;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
 }
@@ -27,9 +29,8 @@
 }
 
 .GoogleMap_header {
-    margin-top: 2rem;
     background-color: transparent;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,11 +38,11 @@
 }
 
 .GoogleMap_header h1 {
-    margin: 0;
+    margin-top: 1.5rem;
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .GoogleMap_header p {
@@ -51,6 +52,8 @@
     width: 100%;
     max-width: 500px;
     height: 5px;
+    margin-bottom: 2rem;
+
 }
 
 .GoogleMap_text {
@@ -91,9 +94,10 @@
 }
 
 @media (max-width: 480px) {
+
     .GoogleMap_Main {
         padding: 10px;
-        height: 350px;
+        height: 550px;
     }
 
     .GoogleMap_Main iframe {
@@ -101,13 +105,13 @@
     }
 
     .GoogleMap_header h1 {
-        font-size: 1.25rem;
+        font-size: 1.8rem;
         margin-bottom: 0.75rem;
     }
 
     .GoogleMap_header p {
-        font-size: 0.875rem;
-        width: 70%;
+        width: 200px;
+        height: 3px;
     }
 
     .GoogleMap_text {

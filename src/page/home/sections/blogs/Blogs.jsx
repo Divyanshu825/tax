@@ -37,7 +37,8 @@ const Blogs = () => {
   return (
     <div className="blogs_container">
       <header className="blogs_header " >
-        <h1 data-aos="zoom-in" data-aos-duration="2000" >Latest Blogs</h1>
+        <h1 data-aos="zoom-in" data-aos-duration="2000" >Learn more from our Latest News And Updates
+        </h1>
         <p></p>
       </header>
       <div className="Blogs_card-slider">

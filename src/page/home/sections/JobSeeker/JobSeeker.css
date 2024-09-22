@@ -1,7 +1,7 @@
 /* App.css */
 .JobSeeker_Container {
     display: flex;
-    margin: 4rem auto;
+    margin: 0 auto;
     flex-direction: column;
     background-image: url('/src/Images/bg5.jpg');
     min-height: 50vh;
@@ -24,7 +24,6 @@
 }
 
 .JobSeeker_header {
-    margin-top: 2rem;
     background-color: transparent;
     padding: 20px;
     display: flex;
@@ -33,14 +32,8 @@
     flex-direction: column;
 }
 
-/* .JobSeeker_Underline {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 2rem;
-} */
-
 .JobSeeker_header h1 {
-    margin: 0;
+    margin-top: 1.5rem;
     font-size: 3rem;
     font-weight: 700;
     color: #fff;
@@ -79,6 +72,11 @@
 }
 
 @media (max-width: 480px) {
+
+    /* .JobSeeker_Container{
+        margin-bottom: 2rem;
+        padding-bottom: 3rem;
+    } */
     .JobSeeker_Content {
         font-size: 1rem;
     }
@@ -86,5 +84,9 @@
     .JobSeeker_header p {
         width: 200px;
         height: 3px;
+    }
+
+    .JobSeeker_header h1 {
+        font-size: 2.2rem;
     }
 }
