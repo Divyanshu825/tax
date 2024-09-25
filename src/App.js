@@ -23,10 +23,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />} />
           <Route path="/client" element={<OurClient />} />
           <Route path="/job" element={<Jobs />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/test" element={<Test />} />
           <Route path="/test" element={<Test />} />
           <Route path="/temp" element={<Temp />} />
@@ -48,7 +48,7 @@ const App = () => {
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
           }}>
-            +
+          +
           {/* <ArrowUpwardIcon /> */}
         </button>
       </Router>

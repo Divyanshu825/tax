@@ -7,7 +7,18 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 20px;
+}
+
+.Contact_Main {
+    background-color: #0000006e;
+}
+
+.Contact_Main2 {
+    background-color: #0000006e;
+}
+
+.Contact_Overlay {
+    background-color: #0000006e;
 }
 
 .Contact_head {
@@ -15,7 +26,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
 .Contact_head h1 {
@@ -42,7 +54,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px 0;
+    padding: 0 40px 0 40px;
 }
 
 .form_left,

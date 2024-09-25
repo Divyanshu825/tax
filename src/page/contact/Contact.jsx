@@ -8,7 +8,7 @@ import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { firdb } from '../../firebase';
 import emailjs from '@emailjs/browser';
 
-
+import ContactImg from '../../Images/Contact4.jpg'
 
 const Contact = () => {
   const [firstname, setFirstname] = useState("");
@@ -78,18 +78,15 @@ const Contact = () => {
   return (
     <div className='Contact_Container'>
 
-      <div className="Overlay_Pages">
-        <div className="Overlay_Pages">
-          <div className="Contact_head"  >
-            <h1>Contact Page</h1>
-            <h2>Home / Contact Page</h2>
-          </div>
-        </div>
+      <div className="Contact_head"  >
+        <h1>Contact Page</h1>
+        <h2>Home / Contact Page</h2>
       </div>
 
-      <div className="Overlay" >
-        <div className="Overlay_Pages">
-          <section className="bg-transparent" style={{ marginTop: '30px' }}>
+
+      <div className='Contact_Main'>
+        <div className='Contact_Main2'>
+          <section className="bg-transparent" >
             <div className="container px-6 py-12 mx-auto" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
               <div className="mb-10 text-center">
                 <h1 className=" text-4xl font-semibold text-gray-800 md:text-3xl dark:text-white ">Get in touch</h1>
@@ -139,11 +136,12 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="Overlay">
-        <div className="Overlay">
+      <div className="Contact_Overlay">
+        <div className="Contact_Overlay">
           <div className="form_container">
             <div className="form_left">
-              {/* <ContactAnimation /> */}
+              <p>Make a free consultation with our expert team to solve your prolems.</p>
+              <img src={ContactImg} alt="" />
             </div>
 
             <div className="form_right">
@@ -159,7 +157,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <div className='form_main'>
+                {/* <div className='form_main'>
                   <h1>Last Name</h1>
                   <input type="text"
                     name="lastname"
@@ -168,7 +166,7 @@ const Contact = () => {
                     onChange={(e) => setLastname(e.target.value)}
                     required
                   />
-                </div>
+                </div> */}
 
                 <div className='form_main'>
                   <h1>Email</h1>
@@ -193,7 +191,7 @@ const Contact = () => {
                 </div>
                 <div className='form_main'>
                   <h1>Message</h1>
-                  <textarea type="text" placeholder='Enter Message' cols={50} rows={5}
+                  <textarea type="text" placeholder='Enter Message' cols={10} rows={2}
                     name="message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
