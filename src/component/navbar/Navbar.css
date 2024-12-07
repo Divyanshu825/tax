@@ -5,12 +5,12 @@
 header {
   position: relative;
   padding: 0 2rem;
-  background-color: #000;
+  background-color: #aaaaaa;
 }
 
 .navbar {
   width: 100%;
-  height: 100px;
+  height: 80px;
   max-width: 1600px;
   margin: 0 auto;
   display: flex;

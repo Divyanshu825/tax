@@ -19,12 +19,12 @@ const Cards = () => {
     const card = [
         {
             title: 'Card 1',
-            description: 'संगीता गुप्ता बहुत प्यारी है I LOVE YOU ❤️',
+            description: 'HIii',
             image: pic,
         },
         {
             title: 'Card 2',
-            description: 'संगीता गुप्ता बहुत प्यारी है',
+            description: 'Hiii',
             image: pic1,
         },
         {

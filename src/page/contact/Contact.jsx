@@ -86,7 +86,7 @@ const Contact = () => {
 
       <div className='Contact_Main'>
         <div className='Contact_Main2'>
-          <section className="bg-transparent" >
+          <section className="bg-transparent" style={{ paddingBottom: '5rem' }} >
             <div className="container px-6 py-12 mx-auto" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
               <div className="mb-10 text-center">
                 <h1 className=" text-4xl font-semibold text-gray-800 md:text-3xl dark:text-white ">Get in touch</h1>
@@ -103,7 +103,7 @@ const Contact = () => {
 
                   <h2 className="mt-4 text-lg font-medium text-gray-800 dark:text-white">Email</h2>
                   <p className="mt-2 text-white dark:text-white">Our friendly team is here to help.</p>
-                  <p className="mt-2 text-blue-500 dark:text-blue-400">anmol303@gmail.com</p>
+                  <p className="mt-2 text-blue-500 dark:text-blue-400">dreamsakar@gmail.com</p>
                 </div>
 
                 <div className="flex flex-col items-center justify-center text-center">

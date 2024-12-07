@@ -1,6 +1,9 @@
 // src/Footer.js
 import React from 'react';
 import './Footer.css';
+import Instagram from '../../Images/instagram.svg'
+import Facebook from '../../Images/Facebook.svg'
+import linkedin from '../../Images/linkedin.svg'
 
 const Footer = () => {
   return (
@@ -13,10 +16,12 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="/client">OurClient</a></li>
+            <li><a href="/job">Job Seekers </a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
         <div className="footer-section">
@@ -24,10 +29,27 @@ const Footer = () => {
           <p>Email: dreamsakar@gmail.com</p>
           <p>Phone: +91 8085527753</p>
           <div className="social-icons">
-            <a href="#facebook" className="social-icon">FB</a>
-            <a href="#twitter" className="social-icon">TW</a>
-            <a href="#linkedin" className="social-icon">LI</a>
-            <a href="#instagram" className="social-icon">IG</a>
+            <a href="#twitter" className="social-icon">
+              <img src={Instagram} alt="" style={{
+                height: '40px'
+              }} />
+            </a>
+            <a href="#facebook" className="social-icon">
+              <img src={Facebook} alt="" style={{
+                height: '40px'
+              }} />
+            </a>
+            <a href="#instagram" className="social-icon">
+              <img src={Instagram} alt="" style={{
+                height: '40px'
+              }} />
+            </a>
+            <a href="#linkedin" className="social-icon">
+              <img src={linkedin} alt="" style={{
+                height: '35px'
+              }} />
+            </a>
+
           </div>
         </div>
       </div>

@@ -1,12 +1,13 @@
 import Lottie from 'lottie-react'
 import React from 'react'
-import Ai from '../../assets/Contact.json';
+import Ai from '../../assets/Contact2.json';
 
-const ContactAnimation = () => {
+const ContactAnimation2 = () => {
 
     const style = {
         marginBottom: '4rem',
-        width:'800px'
+        width:'800px',
+        height:'600px'
     }
 
 
@@ -17,4 +18,4 @@ const ContactAnimation = () => {
     )
 }
 
-export default ContactAnimation
+export default ContactAnimation2

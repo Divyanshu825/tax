@@ -13,6 +13,7 @@ import Footer from './component/footer/Footer';
 import About from './page/About/About';
 import Test from './page/home/sections/Test/Test';
 import Temp from './page/Test/Temp';
+import Contact2 from './page/contact/Contact2';
 
 const App = () => {
 
@@ -26,7 +27,8 @@ const App = () => {
           <Route path="/service" element={<Service />} />
           <Route path="/client" element={<OurClient />} />
           <Route path="/job" element={<Jobs />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact2 />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="/test" element={<Test />} />
           <Route path="/test" element={<Test />} />
           <Route path="/temp" element={<Temp />} />
