@@ -4,8 +4,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; */
-    height: 800px;
     width: 100%;
+    flex-direction: column;
 }
 
 .EndPage_Left {
@@ -47,4 +47,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.Contact_Main_Container {
+    display: flex;
+    flex-direction: row;
 }

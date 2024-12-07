@@ -1,0 +1,72 @@
+/* Container Styles */
+.form-container {
+    max-width: 800px; /* Increased width */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Row Styles */
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds gap between columns */
+    margin-bottom: 20px; /* Adds space between rows */
+  }
+  
+  /* Form Group Styles */
+  .form-group {
+    flex: 1;
+    min-width: 300px; /* Increased minimum width */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Button Styles */
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 800px) {
+    .form-row {
+      flex-direction: column;
+    }
+  }
+  

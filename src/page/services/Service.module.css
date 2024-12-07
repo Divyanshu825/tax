@@ -1,11 +1,12 @@
 .Service_Container {
-    background-image: url('/src/Images/bgImage.jpg');
+    /* background-image: url('/src/Images/bgImage.jpg'); */
     display: flex;
     margin: 0 auto;
     flex-direction: column;
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
+    background-color: #fff;
 }
 
 .Service_head {
@@ -40,7 +41,7 @@
 .Service_map_container {
     max-width: 1210px;
     flex-direction: column;
-    margin: 200px auto;
+    margin: 100px auto;
 }
 
 .Service_map_main {
@@ -82,13 +83,13 @@
 }
 
 .Service_map_title {
-    color: #fff;
+    color: #000;
     font-size: 40px;
     font-weight: 600;
 }
 
 .Service_map_des {
-    color: #fff;
+    color: #000;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.7;

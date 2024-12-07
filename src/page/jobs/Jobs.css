@@ -1,164 +1,237 @@
 .Jobs_Container {
-    background-image: url('/src/Images/bgImage.jpg');
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: repeat;
-    background-attachment: fixed;
+  /* background-image: url('/src/Images/bgImage.jpg'); */
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
 
 }
 
 .Jobs_head {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgb(131, 58, 180);
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-    /* Optional: add padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  /* Optional: add padding for better spacing */
 }
 
 .Jobs_head h1 {
-    margin-top: 2rem;
-    font-size: 2rem;
-    font-weight: 700;
-    align-self: center;
-    margin-bottom: 1rem;
-    color: #000;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  align-self: center;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
 .Jobs_head h2 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    align-self: center;
-    margin-bottom: 2rem;
-    color: #000;
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-self: center;
+  margin-bottom: 2rem;
+  color: #000;
 }
 
 .Job_Main {
-    background-color: #0000006e;
+  background-color: #0000006e;
 }
 
 .Job_Main2 {
-    background-color: #0000006e;
+  background-color: #0000006e;
 }
 
 .Job_Center {
-    background-color: #0000006e;
-    /* padding-bottom: 5rem; */
+  background-color: #0000006e;
+  /* padding-bottom: 5rem; */
 }
 
 .Job_Center2 {
-    width: 100%;
-    display: flex;
-    padding-bottom: 6rem;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    background-color: #0000006e;
+  width: 100%;
+  display: flex;
+  padding-bottom: 6rem;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-color: antiquewhite;
 }
 
 .Job_Center3 {
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-    justify-content: center;
-    align-self: center;
-    /* background-color: #fea632; */
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  justify-content: center;
+  align-self: center;
 }
 
 
 .Job_Des_head {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
 
 .Job_Des_head h1 {
-    margin-top: 2rem;
-    font-size: 2rem;
-    font-weight: 700;
-    justify-content: center;
-    align-self: center;
-    margin-bottom: 1rem;
-    color: #fff;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
 .Job_Des_head h2 {
-    margin-top: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    justify-content: center;
-    align-self: center;
-    color: #fff;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  align-self: center;
+  color: #000;
 }
 
 .Job_Des_Content {
-    margin-top: 1rem;
-    color: #fff;
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: 500;
+  margin-top: 1rem;
+  color: #000;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
-    .Job_Center3 {
-        width: 90%;
-        /* Adjust width to fit smaller screens */
-    }
+  .Job_Center3 {
+    width: 90%;
+    /* Adjust width to fit smaller screens */
+  }
 
-    .Job_Des_head h1 {
-        font-size: 1.8rem;
-        /* Smaller font size for tablets */
-    }
+  .Job_Des_head h1 {
+    font-size: 1.8rem;
+    /* Smaller font size for tablets */
+  }
 
-    .Job_Des_head h2 {
-        font-size: 0.9rem;
-        /* Slightly smaller on tablets */
-    }
+  .Job_Des_head h2 {
+    font-size: 0.9rem;
+    /* Slightly smaller on tablets */
+  }
 
-    .Jobs_head {
-        padding: 1rem;
-        /* Reduce padding on mobile */
-    }
+  .Jobs_head {
+    padding: 1rem;
+    /* Reduce padding on mobile */
+  }
 
-    .Jobs_head h1 {
-        font-size: 1.5rem;
-        /* Adjust font size for mobile */
-        margin-top: 1rem;
-        /* Adjust top margin */
-    }
+  .Jobs_head h1 {
+    font-size: 1.5rem;
+    /* Adjust font size for mobile */
+    margin-top: 1rem;
+    /* Adjust top margin */
+  }
 
-    .Jobs_head h2 {
-        font-size: 1rem;
-        /* Adjust font size for mobile */
-        margin-bottom: 1rem;
-        /* Adjust bottom margin */
-    }
+  .Jobs_head h2 {
+    font-size: 1rem;
+    /* Adjust font size for mobile */
+    margin-bottom: 1rem;
+    /* Adjust bottom margin */
+  }
 
-    .Job_Des_Content {
-        font-size: 1.3rem;
-        /* Adjust text size for smaller screens */
-    }
+  .Job_Des_Content {
+    font-size: 1.3rem;
+    /* Adjust text size for smaller screens */
+  }
 }
 
 
 @media only screen and (max-width: 480px) {
-    .Job_Des_head h1 {
-        font-size: 1.5rem;
-        /* Even smaller font size for mobile */
-    }
+  .Job_Des_head h1 {
+    font-size: 1.5rem;
+    /* Even smaller font size for mobile */
+  }
 
-    .Job_Des_head h2 {
-        font-size: 0.8rem;
-        /* Adjust for mobile */
-    }
+  .Job_Des_head h2 {
+    font-size: 0.8rem;
+    /* Adjust for mobile */
+  }
 
-    .Job_Des_Content {
-        font-size: 1.1rem;
-        /* Even smaller text size for mobile */
-    }
+  .Job_Des_Content {
+    font-size: 1.1rem;
+    /* Even smaller text size for mobile */
+  }
+}
+.form-container {
+  width: 100vw;
+  margin: 0; /* Removes default spacing */
+  padding: 20px; /* Keeps padding for content spacing */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Row Styles */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Adds gap between columns */
+  margin-bottom: 20px;
+  /* Adds space between rows */
+}
+
+/* Form Group Styles */
+.form-group {
+  flex: 1;
+  min-width: 300px;
+  /* Increased minimum width */
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Button Styles */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+  .form-row {
+    flex-direction: column;
+  }
 }
