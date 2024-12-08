@@ -1,9 +1,9 @@
 .AboutSection_Container {
+    position: relative; /* Ensures proper positioning for the overlay */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    /* background-color: blue; */
     background-image: url('/src/Images/bgImage.jpg');
     min-height: 20vh;
     flex-direction: column;
@@ -12,17 +12,28 @@
     background-attachment: fixed;
 }
 
-.AboutSection_overLay {
-    background-color: #0000006e;
+.AboutSection_Container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 50, 80, 0.9); /* Overlay color */
+    z-index: 1; /* Ensures it sits on top of the image */
+    border-radius: 20px;
 }
 
 .AboutSection_Main {
+    position: relative; /* Ensures content appears above the overlay */
     max-width: 1600px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 2; /* Places content above the overlay */
 }
+
 
 .AboutSection_header {
     background-color: transparent;

@@ -25,10 +25,10 @@ const Navbar = () => {
                     <li><a href="/client">OurClient</a></li>
                     <li><a href="/job">Jobs</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/test">Test</a></li>
-                    <li><a href="/temp">Temp</a></li>
+                    {/* <li><a href="/test">Test</a></li>
+                    <li><a href="/temp">Temp</a></li> */}
                 </ul>
-                <a href="/" className="action_btn">Get Started</a>
+                {/* <a href="/" className="action_btn">Get Started</a> */}
                 <div className="toggle_btn" onClick={toggleNavbar}>
                     <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
                 </div>

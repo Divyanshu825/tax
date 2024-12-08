@@ -1,121 +1,79 @@
-import React, { useEffect } from 'react'
-import style from './Service.module.css';
-import { FaCheck } from 'react-icons/fa';
-import pic from '../../Images/bg3.avif'
-import pic2 from '../../Images/bg4.avif'
-import AOS from "aos";
+import React from 'react'
+import './Service.css';
+import { MdCarRental } from "react-icons/md";
+import { LuShare2 } from "react-icons/lu";
+import { MdOutlineAddRoad } from "react-icons/md";
+import { TbMapCheck } from "react-icons/tb";
+import { GiModernCity } from "react-icons/gi";
+
 
 const Service = () => {
 
-  useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 2500,
-      easing: "ease-in-out-cubic",
-    });
-  }, []);
-  const Data = [
+  const data = [
     {
-      title: "OUR VISION",
-      img: pic,
-      des: "Bring your Android and iOS application concept to life on every mobile platform. BBT turns your best concepts into a real-time mobile application. We build the apps that are both striking and fully functional. Our appreciated application developers create incredible mobile apps for Android and iOS platforms at affordable. Our developers are reputed digital explorers who constantly push their limit to bring something new and unique in today's highly competitive market.",
-      lang: ["React Native", "Java"],
+      id: 1,
+      title: "Banking / Securities",
+      des: "ICICI Securities Kotak Securities HDFC Sales ING Vysya Reliance Securities",
+      icon: <MdCarRental />,
+      bg: "#079af0",
     },
     {
-      title: "OUR MISSION",
-      img: pic2,
-      des: "The expert team at BBT utilizes web development for making top quality and dynamic web applications to drive your business to heighten one step ahead of all the market competitors. Our well trained and knowledgeable team of web developers uses the newest technology trends available for website development, upgrade and integration services for several project necessities.",
-      lang: ["React", "Next Js"],
+      id: 2,
+      title: "Insurance",
+      des: "ICICI Prudential Life Insurance Birla Sun Life Insurance Kotak Life Insurance HDFC Life Insurance Met Life Insurance Bharti AXA Future Generali",
+      icon: <LuShare2 />,
+      bg: "#fea632",
     },
     {
-      title: "OUR VISION",
-      img: pic,
-      des: "Bring your Android and iOS application concept to life on every mobile platform. BBT turns your best concepts into a real-time mobile application. We build the apps that are both striking and fully functional. Our appreciated application developers create incredible mobile apps for Android and iOS platforms at affordable. Our developers are reputed digital explorers who constantly push their limit to bring something new and unique in today's highly competitive market.",
-      lang: ["React Native", "Java"],
+      id: 3,
+      title: "Corporate / Business",
+      des: "Mittal Corp Guruji Products Capital Aim LMS Inida Synoris Technologies Radisson Blu Covetus Technologies Future Technologies Stellar Furniture Systematix Infotech",
+      icon: <MdOutlineAddRoad />,
+      bg: "rgb(255, 72, 72)",
     },
     {
-      title: "OUR MISSION",
-      img: pic2,
-      des: "The expert team at BBT utilizes web development for making top quality and dynamic web applications to drive your business to heighten one step ahead of all the market competitors. Our well trained and knowledgeable team of web developers uses the newest technology trends available for website development, upgrade and integration services for several project necessities.",
-      lang: ["React", "Next Js"],
+      id: 4,
+      title: "All-India Permits",
+      des: "GGowithcar.com cars come with an All-India Tourist Permit so that you can drive from Kashmir to",
+      icon: <TbMapCheck />,
+      bg: "#00b072",
     },
     {
-      title: "OUR VISION",
-      img: pic,
-      des: "Bring your Android and iOS application concept to life on every mobile platform. BBT turns your best concepts into a real-time mobile application. We build the apps that are both striking and fully functional. Our appreciated application developers create incredible mobile apps for Android and iOS platforms at affordable. Our developers are reputed digital explorers who constantly push their limit to bring something new and unique in today's highly competitive market.",
-      lang: ["React Native", "Java"],
+      id: 5,
+      title: "Endless Opportunities",
+      des: "The vehicles you rent from Gowithcar.com can be used for trips out of the city or daily travels through town. Gowithcar.com also provides cars for pick-up and drop-off services at Indore airports and Indore bus and train stations.",
+      icon: <GiModernCity />,
+      bg: "#151515",
     },
     {
-      title: "OUR MISSION",
-      img: pic2,
-      des: "The expert team at BBT utilizes web development for making top quality and dynamic web applications to drive your business to heighten one step ahead of all the market competitors. Our well trained and knowledgeable team of web developers uses the newest technology trends available for website development, upgrade and integration services for several project necessities.",
-      lang: ["React", "Next Js"],
+      id: 6,
+      title: "Insurance",
+      des: "ICICI Prudential Life Insurance Birla Sun Life Insurance Kotak Life Insurance HDFC Life Insurance Met Life Insurance Bharti AXA Future Generali",
+      icon: <LuShare2 />,
+      bg: "#fea632",
     },
-
   ];
 
-
   return (
-    <div className={style.Service_Container}>
-
-
-      <div className={style.Service_head}>
-        <h1>Service Page</h1>
-        <h2>Home / Service Page</h2>
+    <div className='Service_Container'>
+      <div className="Service_head"  >
+        <h1>OurClient Page</h1>
+        <h2>Home / OurClient Page</h2>
       </div>
 
-      {/* <div className="Overlay_Pages">
-        <div className="Overlay_Pages">
-          <div className="right_container_3">
-            <p>
-              <FaCheck
-                className="checkIcon"
-                style={{ color: "green" }}
-              />
-              There are many variations of passages of Lorem Ipsum available.
+      <div className="Service_main2">
+        <div className="Service_cardGrid">
+          {data?.map((item, index) => (
+            <div className="Service_cardMain" key={item?.id}>
 
-
-            </p>
-          </div>
-        </div>
-      </div> */}
-
-      <div className={style.Service_map_container}>
-        {Data.map((item, index) => {
-          return (
-            <div
-              data-aos={"fade"}
-              className={index % 2 == 0 ? style.Service_map_main : style.Service_map_main2}
-              key={item}
-            >
-              <div
-                className={
-                  index % 2 == 0
-                    ? style.Service_text_container_map
-                    : style.Service_text_container_map2
-                }
-              >
-                <h1 className={style.Service_map_title}>{item.title}</h1>
-                <p className={style.Service_map_des}>{item.des}</p>
-                {/* <Link href={"/contact"}>
-                                        <button className={style.btn} type="submit">
-                                            <span> Contact now</span>
-                                        </button>
-                                    </Link> */}
-              </div>
-              <div className={style.Service_image_container_map}>
-                <img
-                  className={style.Service_image_map}
-                  src={item.img}
-                  alt="testing mode bor"
-                />
-              </div>
+              <h4 className="Service_title">{item?.title}</h4>
+              <div className="Service_des">{item.des}</div>
             </div>
-          );
-        })}
-      </div>
+          ))}
 
-    </div >
+        </div>
+      </div>
+    </div>
   )
 }
 
