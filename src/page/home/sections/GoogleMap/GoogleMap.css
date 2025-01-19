@@ -1,31 +1,45 @@
 .GoogleMap_container {
+    position: relative; /* Ensures proper positioning for the overlay */
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    flex-direction: column;
     background-image: url('/src/Images/bgImage.jpg');
-    min-height: 50vh;
+    min-height: 30vh;
     flex-direction: column;
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
 }
-
-.GoogleMap_overLay {
-    background-color: #0000006e;
+.GoogleMap_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 50, 80, 0.9); /* Overlay color */
+    z-index: 1; /* Ensures it sits on top of the image */
 }
 
+
 .GoogleMap_Main {
-    padding: 50px;
+    position: relative; /* Ensures content appears above the overlay */
+    max-width: 1600px;
     text-align: center;
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
+    z-index: 2; /* Places content above the overlay */
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 .GoogleMap_Main iframe {
-    width: 100%;
+    width: 1000px;
+
     height: 350px;
+    background-color: aquamarine;
 }
 
 .GoogleMap_header {
@@ -38,21 +52,22 @@
 }
 
 .GoogleMap_header h1 {
-    margin-top: 1.5rem;
-    font-size: 2rem;
+    margin: 0;
+    font-size: 3rem;
     font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
 }
 
 .GoogleMap_header p {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 700;
+    color: #fff;
+    background: rgb(131, 58, 180);
     background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-    width: 100%;
-    max-width: 500px;
-    height: 5px;
     margin-bottom: 2rem;
+    width: 300px;
+    height: 5px;
 
 }
 

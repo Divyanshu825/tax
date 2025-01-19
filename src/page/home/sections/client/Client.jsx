@@ -44,10 +44,10 @@ const Client = () => {
       <div className="text-carousel-main">
 
         <div className="text-carousel-main">
-          <header className="Client_header" >
+          <div className="Client_header" >
             <h1 data-aos="zoom-in" data-aos-duration="2000">Clientele</h1>
             <p></p>
-          </header>
+          </div>
 
           <Slider {...settings}>
             {items.map((text, index) => (
@@ -69,6 +69,8 @@ const Client = () => {
                   <li>HDFC Sales</li>
                   <li>ING Vysya</li>
                   <li>Reliance Securities</li>
+                  <li>Systematix Infotech</li>
+                  <li>Stellar Furniture</li>
                 </div>
               </div>
             </div>
@@ -99,9 +101,7 @@ const Client = () => {
                   <li>Synoris Technologies</li>
                   <li>Radisson Blu</li>
                   <li>Covetus Technologies</li>
-                  <li>Future Technologies</li>
-                  <li>Stellar Furniture</li>
-                  <li>Systematix Infotech</li>
+                 
                 </div>
               </div>
             </div>

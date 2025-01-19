@@ -1,12 +1,15 @@
+
+
+
 .Ourservices_faq-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    background-color: aliceblue;
     border-radius: 10px;
 }
 
 .Ourservices_header {
+    margin-bottom: 20px;
     background-color: transparent;
     padding: 20px;
     display: flex;
@@ -17,7 +20,7 @@
 
 .Ourservices_header h1 {
     margin-top: 1.5rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #000;
     margin-bottom: 2rem;

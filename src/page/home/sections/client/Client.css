@@ -1,6 +1,7 @@
 .text-carousel-container {
     display: flex;
     justify-content: center;
+    background-color: #EAEFF2;
 }
 
 .text-carousel-main {
@@ -67,9 +68,9 @@
     flex-direction: row;
     justify-content: space-between;
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     /* Adjusted font size for responsiveness */
-    margin-top: 6rem;
+    margin-top: 5rem;
     /* Reduced margin for smaller screens */
 }
 

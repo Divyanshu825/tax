@@ -21,7 +21,7 @@ const Home = forwardRef((props, ref) => {
                 <div className='Overlay'> */}
             <Cards />
             <Description />
-            <Faqs />
+            {/* <Faqs /> */}
             <About />
             <Client />
             {/* <SliderSection /> */}

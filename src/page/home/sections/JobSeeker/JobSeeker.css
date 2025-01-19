@@ -12,7 +12,7 @@
 }
 
 .JobSeeker_overLay {
-    background-color: #0000006e;
+    background: rgba(35, 50, 80, 0.9); /* Overlay color */
 }
 
 .JobSeeker_Main {
@@ -53,7 +53,7 @@
 
 .JobSeeker_Content {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     padding: 20px 200px;
 }
