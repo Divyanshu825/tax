@@ -5,12 +5,14 @@ header {
   width: 100%;
   padding: 0 2rem;
   background-color: #fff;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Stronger Bottom Shadow */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  /* Stronger Bottom Shadow */
 }
 
 .navbar {
   width: 100%;
-  height: 90px; /* Increased height from 80px to 90px */
+  height: 90px;
+  /* Increased height from 80px to 90px */
   max-width: 1600px;
   margin: 0 auto;
   display: flex;
@@ -49,10 +51,13 @@ header {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px; /* Distance from text */
+  bottom: -4px;
+  /* Distance from text */
   width: 0;
-  height: 3px; /* Thickness of underline */
-  background-color: orange; /* Underline color */
+  height: 3px;
+  /* Thickness of underline */
+  background-color: orange;
+  /* Underline color */
   transition: width 0.3s ease-in-out;
 }
 
@@ -94,6 +99,10 @@ header {
   color: #000;
 }
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown_menu {
   display: none;
   position: absolute;
@@ -131,6 +140,63 @@ header {
   justify-content: center;
 }
 
+
+
+/* ===================== Unique Updates Dropdown ===================== */
+/* ===================== Unique Updates Dropdown (With Animation) ===================== */
+.updates-dropdown {
+  position: relative;
+}
+
+.updates-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.updates-dropdown:hover .updates-menu {
+  max-height: 200px;
+  /* Adjust height as per content */
+  opacity: 1;
+  visibility: visible;
+}
+
+.updates-menu li {
+  list-style: none;
+  /* padding: 10px; */
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.updates-menu li:last-child {
+  border-bottom: none;
+}
+
+.updates-menu a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.updates-menu a:hover {
+  background: #f1f1f1;
+}
+
+
+
 @media (max-width: 768px) {
 
   .navbar .links,
@@ -155,6 +221,15 @@ header {
   }
 
   .dropdown_menu li {
+    font-size: 0.9rem;
+  }
+
+  .updates-menu {
+    position: relative;
+    width: 100%;
+  }
+
+  .updates-menu li {
     font-size: 0.9rem;
   }
 }
