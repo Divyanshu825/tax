@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../Images/LogoJPG.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [serviceDropdown, setServiceDropdown] = useState(false);
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
@@ -21,15 +22,42 @@ const Navbar = () => {
                 <ul className={`links ${isOpen ? 'open' : ''}`}>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/service">Service</a></li>
-                    
-                    {/* Updates Dropdown with Unique Class Names */}
-                    <li 
+
+                    {/* Services Dropdown (2 Column) */}
+                    <li
+                        className="services-dropdown"
+                        onMouseEnter={() => setServiceDropdown(true)}
+                    // onMouseLeave={() => setServiceDropdown(false)}
+                    >
+                        <a href="/services">
+                            Services <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+                        </a>
+                        {serviceDropdown && (
+                            <div className="services-menu">
+                                <div className="column">
+                                    <a href="/service1">GST Consultancy</a>
+                                    <a href="/service2">Income Tax</a>
+                                    <a href="/service3">Accounting</a>
+                                    <a href="/service4">CMA/Project Report</a>
+                                </div>
+                                <div className="column">
+                                    <a href="/service5">Pan/Tan Registration</a>
+                                    <a href="/service6">Firms and Society Reg.</a>
+                                    <a href="/service7">Other Consultancy</a>
+                                </div>
+                            </div>
+                        )}
+                    </li>
+
+                    {/* Updates Dropdown */}
+                    <li
                         className="updates-dropdown"
                         onMouseEnter={() => setDropdownOpen(true)}
-                        // onMouseLeave={() => setDropdownOpen(false)}
+                    // onMouseLeave={() => setDropdownOpen(false)}
                     >
-                        <a href="/incomeTax">Leatest Updates</a>
+                        <a href="/incomeTax">
+                            Latest Updates <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+                        </a>
                         {dropdownOpen && (
                             <ul className="updates-menu">
                                 <li><a href="/gst">GST</a></li>
@@ -46,7 +74,7 @@ const Navbar = () => {
                     <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
                 </div>
             </div>
-            
+
             {isOpen && (
                 <div className="dropdown_menu">
                     <a href="/"><li>Home</li></a>

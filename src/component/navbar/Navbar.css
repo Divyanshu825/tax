@@ -196,6 +196,113 @@ header {
 }
 
 
+/* ========== Services Dropdown ========== */
+.services-dropdown {
+  position: relative;
+}
+
+.services-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+}
+
+.services-dropdown:hover .services-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.services-menu .column {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+}
+
+.services-menu a:hover {
+  background: #f1f1f1;
+}
+
+/* ========== Updates Dropdown ========== */
+.updates-dropdown {
+  position: relative;
+}
+
+.updates-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.updates-dropdown:hover .updates-menu {
+  max-height: 200px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.updates-menu li {
+  list-style: none;
+  /* padding: 10px; */
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.updates-menu li:last-child {
+  border-bottom: none;
+}
+
+.updates-menu a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.updates-menu a:hover {
+  background: #f1f1f1;
+}
+
+
+.dropdown-icon {
+  margin-left: 5px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.services-dropdown:hover .dropdown-icon,
+.updates-dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+
 
 @media (max-width: 768px) {
 
