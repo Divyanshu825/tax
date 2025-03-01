@@ -1,21 +1,36 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import img from '../../Images/Tax.webp'
+import { auth } from "../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth"; // Import Firebase auth functions
+import img from '../../Images/Tax.webp';
+
 export default function Login() {
     const [formData, setFormData] = useState({
         email: "",
         password: "",
     });
     const [showPassword, setShowPassword] = useState(false);
+    const [error, setError] = useState(""); // State to handle errors
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Login Data: ", formData);
+        setError(""); // Clear previous errors
+
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, formData.email, formData.password);
+            const user = userCredential.user;
+            console.log("User Logged In:", user);
+            alert("Login successful!");
+            // Redirect user or navigate to another page here
+        } catch (error) {
+            console.error("Login Error:", error.message);
+            setError("Invalid email or password. Please try again.");
+        }
     };
 
     return (
@@ -30,6 +45,7 @@ export default function Login() {
                 className="p-12 rounded-2xl shadow-xl max-w-xl w-full text-center bg-white bg-opacity-30 backdrop-blur-md"
             >
                 <h2 className="text-4xl font-bold text-gray-700 mb-10">Login</h2>
+                {error && <p className="text-red-500 mb-4">{error}</p>}
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <input
                         type="email"

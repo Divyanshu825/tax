@@ -1,22 +1,30 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { auth } from "../../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export default function Signup() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        password: "",
-    });
+    const [formData, setFormData] = useState({ name: "", email: "", password: "" });
     const [showPassword, setShowPassword] = useState(false);
+    const [error, setError] = useState(null);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Signup Data: ", formData);
+        setError(null);
+
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+            console.log("User Registered:", userCredential.user);
+            alert("Sign-up successful!");
+        } catch (err) {
+            console.error("Sign-up error:", err.message);
+            setError(err.message);
+        }
     };
 
     return (
@@ -28,6 +36,7 @@ export default function Signup() {
                 className="bg-white p-12 rounded-2xl shadow-xl max-w-xl w-full text-center"
             >
                 <h2 className="text-4xl font-bold text-gray-700 mb-10">Sign Up</h2>
+                {error && <p className="text-red-500">{error}</p>}
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <input
                         type="text"
