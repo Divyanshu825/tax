@@ -1,0 +1,16 @@
+.admin_contact {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/src/Images/Millets2.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.admin_contact_table {
+    margin: 50px 20px 100px 20px;
+}
+
+.table_th{
+    font-size: 130px;
+}

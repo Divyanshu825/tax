@@ -36,11 +36,11 @@ const Blogs = () => {
 
   return (
     <div className="blogs_container">
-      <header className="blogs_header " >
+      <div className="blogs_header " >
         <h1 data-aos="zoom-in" data-aos-duration="2000" >Learn more from our Latest News And Updates
         </h1>
         <p></p>
-      </header>
+      </div>
       <div className="Blogs_card-slider">
 
         {/* Large screens: Show cards directly */}
@@ -50,12 +50,12 @@ const Blogs = () => {
             <div key={index} className="Blogs_card">
               <div className="Blogs_card-image">
                 <img src={card.image} alt={card.title} />
-                <div className="Blogs_overlay">
+                {/* <div className="Blogs_overlay">
                   <div className="Blogs_overlay-text">
                     <h3>{card.title}</h3>
                     <p>{card.description}</p>
                   </div>
-                </div>
+                </div> */}
               </div>
               <h2>Learn more from our Latest News</h2>
               <div className='Blogs_bottom'>

@@ -1,0 +1,32 @@
+.ServiceHomeCtn{
+  padding-top: 30px;
+}
+
+.ServiceHomeMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.ServiceHomeMain h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.ServiceHomeMain p {
+  font-size: 18px;
+  margin-top: 10px;
+  /* font-weight: 600; */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  cursor: pointer;
+}

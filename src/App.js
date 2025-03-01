@@ -1,19 +1,23 @@
 import React from 'react';
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-
-
 import Home from './page/home/Home';
-import Contact from './page/contact/Contact';
 import Service from './page/services/Service';
 import OurClient from './page/ourclient/OurClient';
 import Jobs from './page/jobs/Jobs';
 import Navbar from './component/navbar/Navbar';
 import Footer from './component/footer/Footer';
 import About from './page/About/About';
-import Test from './page/home/sections/Test/Test';
-import Temp from './page/Test/Temp';
+// import Test from './page/home/sections/Test/Test';
 import Contact2 from './page/contact/Contact2';
+import IncomeTax from './page/IncomeTax/IncomeTax';
+import Gst from './page/gst/Gst';
+import Images from './page/Images/Images';
+import Login from './page/login/Login.jsx';
+import Signup from './page/signup/Signup.jsx';
+import Dashboard from './admin/dashboard/Dashboard.jsx';
+import Admin from './admin/Admin.jsx';
+
 
 const App = () => {
 
@@ -21,18 +25,25 @@ const App = () => {
     <div>
       <Router>
         <Navbar />
-        {/* <Temp /> */}
-
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
           <Route path="/client" element={<OurClient />} />
-          <Route path="/job" element={<Jobs />} />
+          <Route path="/job" element={<Jobs />} /> 
+          <Route path="/incomeTax" element={<IncomeTax />} /> 
+          <Route path="/gst" element={<Gst />} /> 
+          <Route path="/images" element={<Images />} /> 
           <Route path="/contact" element={<Contact2 />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+
           {/* <Route path="/contact" element={<Contact />} /> */}
-          <Route path="/test" element={<Test />} />
-          <Route path="/test" element={<Test />} />
+          {/* <Route path="/test" element={<Test />} />
+          <Route path="/test" element={<Test />} /> */}
           {/* <Route path="/temp" element={<Temp />} /> */}
         </Routes>
 

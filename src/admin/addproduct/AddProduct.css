@@ -1,0 +1,14 @@
+.C_container{
+    width: 150%;
+    max-width: 1600px;
+    /* margin-left: 10rem; */
+}
+.Admin_AddProduct_container{
+    background-image: url('/src/Images/Millets2.png');
+    display: flex;
+    margin: 10;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}

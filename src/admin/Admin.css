@@ -1,0 +1,29 @@
+.ad_p_container {
+    position: relative;
+    padding-top: 82px;
+    display: flex;
+    background-color: #f8f9fa;
+    color: rgba(80, 80, 80, 0.884);
+}
+
+.ad_p_container_f {
+    position: relative;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: rgba(80, 80, 80, 0.884);
+}
+
+.ad_comp_3 {
+    width: 300px;
+}
+
+.ad_comp_1 {
+    margin: 2%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}

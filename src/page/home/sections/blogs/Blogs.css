@@ -7,7 +7,7 @@
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -23,8 +23,8 @@
 .blogs_header p {
     font-size: 3rem;
     font-weight: 700;
-    background: rgb(131, 58, 180);
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    /* background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%); */
     width: 300px;
     height: 5px;
     margin-left: 140px;
@@ -48,7 +48,7 @@
 .Blogs_card {
     width: 40%;
     position: relative;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 10px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -57,9 +57,11 @@
     padding: 15px;
     width: 100%;
     font-size: 18px;
+    width: 100%;
     font-weight: 600;
-    background: rgb(131, 58, 180);
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.19); */
+    /* background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%); */
     display: block;
 }
 
@@ -77,14 +79,15 @@
 }
 
 .Blogs_bottom {
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
+    padding: 12px;
 }
 
 
@@ -98,7 +101,7 @@
     width: 150px;
 }
 
-.Blogs_overlay {
+/* .Blogs_overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -111,7 +114,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-}
+} */
 
 .Blogs_card-image:hover .Blogs_overlay {
     transform: translateY(0);

@@ -136,7 +136,7 @@
 
 .cardMain:hover {
     transform: translateY(-30px);
-    background-color: rgb(255, 225, 225);
+    /* background-color: rgb(255, 225, 225); */
 }
 
 .iconView[data-color='#079af0'] {
@@ -172,6 +172,7 @@
 .cardMain:hover {
     transform: translateY(-15px);
     /* Reduce the lift effect */
+    /* background-color: rgb(255, 240, 240); */
     background-color: rgb(255, 240, 240);
     /* Subtle background change */
     transition: all ease 0.2s;

@@ -4,7 +4,7 @@ import style from "./About.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import pic from '../../Images/bg3.avif'
+import pic from '../../Images/Img/img.jpeg'
 import pic2 from '../../Images/bg4.avif'
 import AboutCarousel from "./AboutCarousel/AboutCarousel";
 

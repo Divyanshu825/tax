@@ -14,10 +14,10 @@ const GoogleMap = () => {
 
     return (
         <div className='GoogleMap_container'>
-            <header className="GoogleMap_header" >
+            <div className="GoogleMap_header" >
                 <h1 data-aos="zoom-in" data-aos-duration="2000">EXPLORE PUNYARTH ON GOOGLE MAP</h1>
                 <p></p>
-            </header>
+            </div>
 
             <div className='GoogleMap_Main' data-aos="fade-right" data-aos-duration="2000">
                 <iframe

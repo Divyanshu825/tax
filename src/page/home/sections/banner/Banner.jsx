@@ -2,9 +2,9 @@ import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import './Banner.css';
-import pic from '../../../../Images/bgImage.jpg';
-import pic2 from '../../../../Images/user.jpeg';
-import pic3 from '../../../../Images/Contact4.jpg';
+import pic from '../../../../Images/Img/pic.jpeg';
+import pic2 from '../../../../Images/Img/img.jpeg';
+import pic3 from '../../../../Images/Img/5.jpg';
 
 
 
@@ -60,8 +60,9 @@ const Banner = () => {
         {slideImages.map((slideImage, index) => (
           <div key={index} >
             <img src={slideImage.url} alt="" style={{
-              width: '1600px',
-              height: '700px'
+              width: '100%',
+              height: '500px',
+              marginTop: '20px'
             }} />
             {/* <div className='divStyle' style={{ 'backgroundImage': `url(${slideImage.url})` }}>
               <span className='spanStyle'>{slideImage.caption}</span>

@@ -31,20 +31,20 @@ const OurClient = () => {
       icon: <MdOutlineAddRoad />,
       bg: "rgb(255, 72, 72)",
     },
-    // {
-    //   id: 4,
-    //   title: "All-India Permits",
-    //   des: "GGowithcar.com cars come with an All-India Tourist Permit so that you can drive from Kashmir to",
-    //   icon: <TbMapCheck />,
-    //   bg: "#00b072",
-    // },
-    // {
-    //   id: 5,
-    //   title: "Endless Opportunities",
-    //   des: "The vehicles you rent from Gowithcar.com can be used for trips out of the city or daily travels through town. Gowithcar.com also provides cars for pick-up and drop-off services at Indore airports and Indore bus and train stations.",
-    //   icon: <GiModernCity />,
-    //   bg: "#151515",
-    // },
+    {
+      id: 4,
+      title: "All-India Permits",
+      des: "GGowithcar.com cars come with an All-India Tourist Permit so that you can drive from Kashmir to",
+      icon: <TbMapCheck />,
+      bg: "#00b072",
+    },
+    {
+      id: 5,
+      title: "Endless Opportunities",
+      des: "The vehicles you rent from Gowithcar.com can be used for trips out of the city or daily travels through town. Gowithcar.com also provides cars for pick-up and drop-off services at Indore airports and Indore bus and train stations.",
+      icon: <GiModernCity />,
+      bg: "#151515",
+    },
   ];
 
   return (

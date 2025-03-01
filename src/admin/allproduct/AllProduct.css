@@ -1,0 +1,15 @@
+.allproduct_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-image: url("/src/Images/Millets2.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    height: 600px;
+
+}
+
+.alllproduct_data {
+    margin: 70px 10px 10px 10px;
+}

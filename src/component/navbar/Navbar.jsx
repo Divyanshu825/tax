@@ -22,13 +22,15 @@ const Navbar = () => {
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/service">Service</a></li>
-                    <li><a href="/client">OurClient</a></li>
-                    <li><a href="/job">Jobs</a></li>
+                    {/* <li><a href="/client">OurClient</a></li> */}
+                    <li><a href="/incomeTax">Income Tax</a></li>
+                    <li><a href="/gst">GST</a></li>
+                    {/* <li><a href="/images">Images</a></li> */}
                     <li><a href="/contact">Contact</a></li>
-                    {/* <li><a href="/test">Test</a></li>
-                    <li><a href="/temp">Temp</a></li> */}
+                    <li><a href="/Signup">SignUp</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/admin">Admin</a></li>
                 </ul>
-                {/* <a href="/" className="action_btn">Get Started</a> */}
                 <div className="toggle_btn" onClick={toggleNavbar}>
                     <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
                 </div>
@@ -59,6 +61,11 @@ const Navbar = () => {
                     <a href="/contact">
                         <li>
                             Contact
+                        </li>
+                    </a>
+                    <a href="/images">
+                        <li>
+                            Images
                         </li>
                     </a>
                     <a href="/" className="action_btn">

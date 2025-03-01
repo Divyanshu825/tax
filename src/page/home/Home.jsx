@@ -11,26 +11,19 @@ import Description from './sections/description/Description'
 import Client from './sections/client/Client'
 import Blogs from './sections/blogs/Blogs'
 import Ourservices from './sections/ourservices/Ourservices'
+import ServiceHome from './sections/service/ServiceHome'
 
 
 const Home = forwardRef((props, ref) => {
     return (
         <div className='home' id="home-section" ref={ref}>
             <Banner />
-            {/* <div className='Overlay_Pages'>
-                <div className='Overlay'> */}
-            <Cards />
+            <ServiceHome />
             <Description />
-            {/* <Faqs /> */}
-            <About />
+            {/* <About /> */}
             <Client />
-            {/* <SliderSection /> */}
-            <JobSeeker />
-            <Ourservices />
             <Blogs />
             <GoogleMap />
-            {/* </div>
-            </div> */}
         </div>
     )
 })
