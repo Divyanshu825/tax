@@ -17,6 +17,9 @@ import Login from './page/login/Login.jsx';
 import Signup from './page/signup/Signup.jsx';
 import Dashboard from './admin/dashboard/Dashboard.jsx';
 import Admin from './admin/Admin.jsx';
+import AddProduct from './admin/addproduct/AddProduct.jsx';
+import GSTBlogs from './admin/GST/GSTBlogs.jsx';
+import IncomeTaxBlog from './admin/IncomeTaxBlog/IncomeTaxBlog.jsx';
 
 
 const App = () => {
@@ -41,11 +44,11 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/admin-pannel/addproduct" element={<AddProduct />} />
+          <Route path="/admin-pannel/GSTBlogs" element={<GSTBlogs />} />
+          <Route path="/admin-pannel/IncomeTaxBlog" element={<IncomeTaxBlog />} />
 
-          {/* <Route path="/contact" element={<Contact />} /> */}
-          {/* <Route path="/test" element={<Test />} />
-          <Route path="/test" element={<Test />} /> */}
-          {/* <Route path="/temp" element={<Temp />} /> */}
+          
         </Routes>
 
         <Footer />

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { collection, addDoc } from "firebase/firestore";
-import { firdb, storage } from '../../../firebase';
 import { ToastContainer, toast } from 'react-toastify';
 import './AddProduct.css';
 import { Stack } from '@mui/material';
@@ -65,7 +64,7 @@ const AddProduct = () => {
         let ids2 = new Date();
         let url_path = ids1 + "_" + ids2;
         const storageRef = ref(
-          storage,
+          'storage',
           `/Product/${url_path}`
         );
 
@@ -121,7 +120,7 @@ const AddProduct = () => {
       }));
 
       // Add product and categories array to Firestore
-      await addDoc(collection(firdb, 'products'), {
+      await addDoc(collection('firdb', 'products'), {
         name: productName,
         description: productDescription,
         price: productPrice,

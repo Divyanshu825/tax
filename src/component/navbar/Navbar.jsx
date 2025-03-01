@@ -22,13 +22,9 @@ const Navbar = () => {
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/service">Service</a></li>
-                    {/* <li><a href="/client">OurClient</a></li> */}
-                    <li><a href="/incomeTax">Income Tax</a></li>
-                    <li><a href="/gst">GST</a></li>
-                    {/* <li><a href="/images">Images</a></li> */}
+                    <li><a href="/incomeTax">Updates</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/Signup">SignUp</a></li>
-                    <li><a href="/dashboard">Dashboard</a></li>
                     <li><a href="/admin">Admin</a></li>
                 </ul>
                 <div className="toggle_btn" onClick={toggleNavbar}>

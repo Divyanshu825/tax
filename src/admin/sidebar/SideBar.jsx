@@ -43,43 +43,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <ListItemText primary="DashBoard" />
                 </ListItem>
 
-                <ListItem button component={Link} to="/admin-pannel/addproduct" onClick={toggleSidebar}>
+                <ListItem button component={Link} to="/admin-pannel/GSTBlogs" onClick={toggleSidebar}>
                     <MdNoteAdd style={{ fontSize: 30, marginRight: 20 }} />
-                    <ListItemText primary="Add Product" />
+                    <ListItemText primary="Add GST Blog" />
                 </ListItem>
 
-                <ListItem button component={Link} to="/admin-pannel/allproduct" onClick={toggleSidebar}>
-                    <TiThSmallOutline style={{ fontSize: 30, marginRight: 20 }} />
-                    <ListItemText primary="All Product" />
+                <ListItem button component={Link} to="/admin-pannel/IncomeTaxBlog" onClick={toggleSidebar}>
+                    <MdNoteAdd style={{ fontSize: 30, marginRight: 20 }} />
+                    <ListItemText primary="Add Income Tax Blog" />
                 </ListItem>
 
-                <ListItem button component={Link} to="/admin-pannel/updateproduct" onClick={toggleSidebar}>
-                    <MdBrowserUpdated style={{ fontSize: 30, marginRight: 20 }} />
-                    <ListItemText primary="Update Product" />
-                </ListItem>
-
-                <ListItem button component={Link} to="/admin-pannel/deleteproduct" onClick={toggleSidebar}>
-                    <MdDeleteForever style={{ fontSize: 30, marginRight: 20 }} />
-                    <ListItemText primary="Delete Product" />
-                </ListItem>
-
-                <ListItem button component={Link} to="/admin-pannel/contactdetails" onClick={toggleSidebar}>
-                    <MdPermContactCalendar style={{ fontSize: 30, marginRight: 20 }} />
-                    <ListItemText primary="Contact Details" />
-                </ListItem>
-
-                <ListItem button component={Link} to="/productdesc" onClick={toggleSidebar}>
-                    <MdAddShoppingCart style={{ fontSize: 30, marginRight: 20 }} />
-                    <ListItemText primary="Order Details" />
-                </ListItem>
-
-                {/* <ListItem button component={Link} to="/productdesc" onClick={toggleSidebar}>
-                    <ListItemText primary="Product Description" />
-                </ListItem> */}
-
-                <ListItem button component={Link} to="/admin-pannel/test2" onClick={toggleSidebar}>
-                    <ListItemText primary="Test2" />
-                </ListItem>
             </List>
         </Drawer>
     );

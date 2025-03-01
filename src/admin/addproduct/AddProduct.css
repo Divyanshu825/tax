@@ -4,7 +4,7 @@
     /* margin-left: 10rem; */
 }
 .Admin_AddProduct_container{
-    background-image: url('/src/Images/Millets2.png');
+    /* background-image: url('/src/Images/Millets2.png'); */
     display: flex;
     margin: 10;
     flex-direction: column;
