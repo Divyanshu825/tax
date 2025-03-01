@@ -18,8 +18,9 @@ import Signup from './page/signup/Signup.jsx';
 import Dashboard from './admin/dashboard/Dashboard.jsx';
 import Admin from './admin/Admin.jsx';
 import AddProduct from './admin/addproduct/AddProduct.jsx';
-import GSTBlogs from './admin/GST/GSTBlogs.jsx';
 import IncomeTaxBlog from './admin/IncomeTaxBlog/IncomeTaxBlog.jsx';
+import AddGstBlog from './admin/GstBlogs/AddGstBlog/AddGstBlog.jsx';
+import AllGstBlog from './admin/GstBlogs/AllGstBlog/AllGstBlog.jsx';
 
 
 const App = () => {
@@ -45,7 +46,8 @@ const App = () => {
           <Route path="/admin" element={<Admin />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin-pannel/addproduct" element={<AddProduct />} />
-          <Route path="/admin-pannel/GSTBlogs" element={<GSTBlogs />} />
+          <Route path="/admin-pannel/AddGstBlog" element={<AddGstBlog />} />
+          <Route path="/admin-pannel/AllGstBlog" element={<AllGstBlog />} />
           <Route path="/admin-pannel/IncomeTaxBlog" element={<IncomeTaxBlog />} />
 
           

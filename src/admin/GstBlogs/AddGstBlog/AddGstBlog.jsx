@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './GSTBlogs.css';
+import './AddGstBlog.css';
 
-const GSTBlogs = () => {
+const AddGstBlog = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
@@ -74,4 +74,4 @@ const GSTBlogs = () => {
 
 
 
-export default GSTBlogs
+export default AddGstBlog

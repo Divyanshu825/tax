@@ -7,10 +7,10 @@ import ContactAnimation2 from '../../component/Animation/ContactAnimation2';
 const Contact2 = () => {
     return (
         <div className='EndPage_Container'>
-            <div className="Jobs_head"  >
+            {/* <div className="Jobs_head"  >
                 <h1>Contact Us</h1>
                 <h2>Home / Contact Us</h2>
-            </div>
+            </div> */}
             <section className="bg-black"  >
                 <div className="container px-6 py-12 mx-auto" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <div className="mb-10 text-center">
@@ -53,7 +53,7 @@ const Contact2 = () => {
 
                             <h2 className="mt-4 text-lg font-medium text-gray-800 dark:text-white">Phone</h2>
                             <p className="mt-2 text-white dark:text-white">Mon - Fri from 8 am to 5 pm.</p>
-                            <p className="mt-2 text-blue-500 dark:text-blue-400">+91 - 9754957303</p>
+                            <p className="mt-2 text-blue-500 dark:text-blue-400">+91 - 9713247482</p>
                         </div>
                     </div>
                 </div>

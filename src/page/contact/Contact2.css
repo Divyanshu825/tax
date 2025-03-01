@@ -1,17 +1,13 @@
 .EndPage_Container {
     display: flex;
-    /* background-image: url('https://img.pikbest.com/wp/202348/software-development-minimal-cartoon-style-3d-render-illustration-of-coding-language-by-developer-on-pink-background_9775049.jpg!sw800');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
     width: 100%;
     flex-direction: column;
 }
 
+/* By Default: Desktop View */
 .EndPage_Left {
     display: flex;
     width: 60%;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     gap: 40px;
@@ -43,7 +39,6 @@
     display: flex;
     width: 50%;
     background-color: aliceblue;
-    /* background-image: url('https://img.pikbest.com/wp/202348/software-development-minimal-cartoon-style-3d-render-illustration-of-coding-language-by-developer-on-pink-background_9775049.jpg!sw800'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -52,4 +47,99 @@
 .Contact_Main_Container {
     display: flex;
     flex-direction: row;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+/* ✅ Tablet View (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .EndPage_Left {
+        width: 80%;
+        gap: 30px;
+        padding-top: 3rem;
+    }
+
+    .EndPage_Left h1 {
+        font-size: 2rem;
+    }
+
+    .EndPage_Left h4 {
+        font-size: 0.9rem;
+    }
+
+    .EndPage_TextField {
+        width: 80%;
+    }
+
+    .EndPage_Right {
+        width: 100%;
+    }
+
+    .Contact_Main_Container {
+        flex-direction: column;
+    }
+}
+
+/* ✅ Mobile View (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .EndPage_Container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .EndPage_Left {
+        width: 100%;
+        gap: 20px;
+        padding-top: 2rem;
+    }
+
+    .EndPage_Left h1 {
+        font-size: 1.8rem;
+    }
+
+    .EndPage_Left h4 {
+        font-size: 0.8rem;
+    }
+
+    .EndPage_Button {
+        width: 90px;
+    }
+
+    .EndPage_TextField {
+        width: 90%;
+    }
+
+    .EndPage_Right {
+        width: 100%;
+    }
+
+    .Contact_Main_Container {
+        flex-direction: column;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+}
+
+/* ✅ Small Mobile View (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .EndPage_Left h1 {
+        font-size: 1.5rem;
+    }
+
+    .EndPage_Left h4 {
+        font-size: 0.7rem;
+    }
+
+    .EndPage_Button {
+        width: 80px;
+    }
+
+    .EndPage_TextField {
+        width: 95%;
+    }
+
+    .EndPage_Right {
+        width: 100%;
+    }
 }

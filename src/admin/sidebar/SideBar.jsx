@@ -32,7 +32,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             }}
         >
             <List sx={{ marginTop: 10 }}>
-                <ListItem button component={Link} to="/home" onClick={toggleSidebar}>
+                <ListItem button component={Link} to="/" onClick={toggleSidebar}>
                     <IoIosHome style={{ fontSize: 30, marginRight: 20 }} />
 
                     <ListItemText primary="Home" />
@@ -43,7 +43,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <ListItemText primary="DashBoard" />
                 </ListItem>
 
-                <ListItem button component={Link} to="/admin-pannel/GSTBlogs" onClick={toggleSidebar}>
+                <ListItem button component={Link} to="/admin-pannel/AllGstBlog" onClick={toggleSidebar}>
                     <MdNoteAdd style={{ fontSize: 30, marginRight: 20 }} />
                     <ListItemText primary="Add GST Blog" />
                 </ListItem>
