@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './IncomeTaxBlog.css';
-import { db } from '../../firebase';
+import './AddIncomeTaxBlog.css';
 import { collection,addDoc } from 'firebase/firestore';
+import { db } from '../../../firebase';
 
 const AddIncomeTaxBlog = () => {
   const [title, setTitle] = useState('');
