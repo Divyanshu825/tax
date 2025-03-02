@@ -7,7 +7,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
-    const [formData, setFormData] = useState({ name: "", email: "", password: ""});
+    const [formData, setFormData] = useState({ name: "", email: "", password: "" });
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null);
     const navigate = useNavigate()
@@ -23,10 +23,10 @@ export default function Signup() {
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
             const user = userCredential.user;
-            await setDoc(doc(db,"users",user.uid),{
-                name:formData.name,
-                email:formData.email,
-                role:"user",
+            await setDoc(doc(db, "users", user.uid), {
+                name: formData.name,
+                email: formData.email,
+                role: "user",
             })
             alert("Sign-up successful!");
             navigate("/login");

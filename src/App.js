@@ -18,12 +18,10 @@ import Signup from './page/signup/Signup.jsx';
 import Dashboard from './admin/dashboard/Dashboard.jsx';
 import Admin from './admin/Admin.jsx';
 import AddProduct from './admin/addproduct/AddProduct.jsx';
+// import IncomeTaxBlog from './admin/IncomeTaxBlog/IncomeTaxBlog.jsx';
 import AddGstBlog from './admin/GstBlogs/AddGstBlog/AddGstBlog.jsx';
 import AllGstBlog from './admin/GstBlogs/AllGstBlog/AllGstBlog.jsx';
-import AllIncomeTaxBlog from './admin/IncomeTaxBlog/AllIncomeTaxBlog/AllIncomeTaxBlog.jsx';
-import AddIncomeTaxBlog from './admin/IncomeTaxBlog/AddIncomeTaxBlog/AddIncomeTaxBlog.jsx';
-import AllService from './admin/adminService/AllService/AllService.jsx';
-import AddService from './admin/adminService/AddService/AddService.jsx';
+import ProtectedRoute from './component/protected/ProtectedRoute.jsx';
 
 
 const App = () => {
@@ -31,34 +29,33 @@ const App = () => {
   return (
     <div>
       <Router>
-        
+
         <Navbar />
-      
+
         <Routes>
           <Route path="/" element={<Home />} />
-          
+
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
           <Route path="/client" element={<OurClient />} />
-          <Route path="/job" element={<Jobs />} /> 
-          <Route path="/incomeTax" element={<IncomeTax />} /> 
-          <Route path="/gst" element={<Gst />} /> 
-          <Route path="/images" element={<Images />} /> 
+          <Route path="/job" element={<Jobs />} />
+          <Route path="/incomeTax" element={<IncomeTax />} />
+          <Route path="/gst" element={<Gst />} />
+          <Route path="/images" element={<Images />} />
           <Route path="/contact" element={<Contact2 />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/admin-pannel/addproduct" element={<AddProduct />} />
-          <Route path="/admin-pannel/AddGstBlog" element={<AddGstBlog />} />
-          <Route path="/admin-pannel/AllGstBlog" element={<AllGstBlog />} />
-          <Route path="/admin-pannel/AddIncomeTaxBlog" element={<AddIncomeTaxBlog />} />
-          <Route path="/admin-pannel/AllIncomeTaxBlog" element={<AllIncomeTaxBlog />} />
+          <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+          <Route path="/admin-panel" element={<ProtectedRoute>
+            <Routes>
+              <Route path="addproduct" element={<AddProduct />} />
+              <Route path="AddGstBlog" element={<AddGstBlog />} />
+              <Route path="AllGstBlog" element={<AllGstBlog />} />
+              {/* <Route path="IncomeTaxBlog" element={<IncomeTaxBlog />} /> */}
+            </Routes>
+          </ProtectedRoute>} />
 
-          <Route path="/admin-pannel/AllService" element={<AllService />} />
-          <Route path="/admin-pannel/AddService" element={<AddService />} />
 
-          
         </Routes>
 
         <Footer />

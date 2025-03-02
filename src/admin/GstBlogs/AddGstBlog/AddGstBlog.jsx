@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AddGstBlog.css';
-import { db} from '../../../firebase';
-import { collection,addDoc } from 'firebase/firestore';
+import { db } from '../../../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 const AddGstBlog = () => {
   const [title, setTitle] = useState('');
@@ -19,16 +19,16 @@ const AddGstBlog = () => {
       };
     }
   };
-  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (!db) {
       console.error("Firestore is not initialized.");
       return;
     }
-  
+
     try {
       await addDoc(collection(db, "gstblogs"), {
         title,
@@ -44,7 +44,7 @@ const AddGstBlog = () => {
       console.error("Error saving blog:", error);
     }
   };
-  
+
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-8">
