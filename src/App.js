@@ -21,6 +21,7 @@ import AddProduct from './admin/addproduct/AddProduct.jsx';
 import IncomeTaxBlog from './admin/IncomeTaxBlog/IncomeTaxBlog.jsx';
 import AddGstBlog from './admin/GstBlogs/AddGstBlog/AddGstBlog.jsx';
 import AllGstBlog from './admin/GstBlogs/AllGstBlog/AllGstBlog.jsx';
+import ProtectedRoute from './component/protected/ProtectedRoute.jsx';
 
 
 const App = () => {
@@ -43,12 +44,15 @@ const App = () => {
           <Route path="/contact" element={<Contact2 />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/admin-pannel/addproduct" element={<AddProduct />} />
-          <Route path="/admin-pannel/AddGstBlog" element={<AddGstBlog />} />
-          <Route path="/admin-pannel/AllGstBlog" element={<AllGstBlog />} />
-          <Route path="/admin-pannel/IncomeTaxBlog" element={<IncomeTaxBlog />} />
+          <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+          <Route path="/admin-panel" element={<ProtectedRoute> 
+    <Routes>
+        <Route path="addproduct" element={<AddProduct />} />
+        <Route path="AddGstBlog" element={<AddGstBlog />} />
+        <Route path="AllGstBlog" element={<AllGstBlog />} />
+        <Route path="IncomeTaxBlog" element={<IncomeTaxBlog />} />
+    </Routes>
+</ProtectedRoute>} />
 
           
         </Routes>
