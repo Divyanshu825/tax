@@ -5,6 +5,7 @@ import { doc,getDoc } from "firebase/firestore";
 
 export default function ProtectedRoute({ children }) {
     const [isAdmin, setIsAdmin] = useState(null);
+    
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
