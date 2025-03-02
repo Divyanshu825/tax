@@ -1,0 +1,22 @@
+.point-field {
+    position: relative;
+    /* Absolute positioning के लिए जरूरी */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+}
+
+.add-point-btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}

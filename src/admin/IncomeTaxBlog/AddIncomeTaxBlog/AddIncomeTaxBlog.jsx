@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './IncomeTaxBlog.css';
+import './AddIncomeTaxBlog.css';
 
-const IncomeTaxBlog = () => {
+const AddIncomeTaxBlog = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
@@ -73,5 +73,4 @@ const IncomeTaxBlog = () => {
 
 
 
-
-export default IncomeTaxBlog
+export default AddIncomeTaxBlog

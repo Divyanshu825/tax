@@ -45,12 +45,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
                 <ListItem button component={Link} to="/admin-pannel/AllGstBlog" onClick={toggleSidebar}>
                     <MdNoteAdd style={{ fontSize: 30, marginRight: 20 }} />
-                    <ListItemText primary="Add GST Blog" />
+                    <ListItemText primary="GST Blog" />
                 </ListItem>
 
-                <ListItem button component={Link} to="/admin-pannel/IncomeTaxBlog" onClick={toggleSidebar}>
+                <ListItem button component={Link} to="/admin-pannel/AllIncomeTaxBlog" onClick={toggleSidebar}>
                     <MdNoteAdd style={{ fontSize: 30, marginRight: 20 }} />
-                    <ListItemText primary="Add Income Tax Blog" />
+                    <ListItemText primary="Income Tax Blog" />
+                </ListItem>
+                <ListItem button component={Link} to="/admin-pannel/AllService" onClick={toggleSidebar}>
+                    <MdNoteAdd style={{ fontSize: 30, marginRight: 20 }} />
+                    <ListItemText primary="All Service" />
                 </ListItem>
 
             </List>

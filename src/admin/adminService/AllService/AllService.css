@@ -1,0 +1,6 @@
+.serviceListHead {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}

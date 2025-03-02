@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Table, TableHead, TableRow, TableCell, TableBody, Button } from "@mui/material";
 
-function AllGstBlog() {
+function AllService() {
     const [services, setServices] = useState([
         {
             id: 1,
@@ -51,20 +51,21 @@ function AllGstBlog() {
         <div className="p-8">
 
             <Button variant="contained">
-                <a href="/admin-pannel/AddGstBlog">
-                    Add Gst Blog
+                <a href="/admin-pannel/AddService">
+                    Add Services
                 </a>
             </Button>
-            <h2 className="text-2xl font-bold mb-6 justify-self-center flex" >All Gst Blogs</h2>
+            <h2 className="text-2xl font-bold mb-6 justify-self-center flex" >Service List</h2>
 
             <Table border="1">
                 <TableHead>
                     <TableRow style={{ backgroundColor: "#f5f5f5" }}>
                         <TableCell>S no.</TableCell>
+                        <TableCell>Service Name</TableCell>
                         <TableCell>Title</TableCell>
                         <TableCell>Description</TableCell>
                         <TableCell>Image</TableCell>
-                        
+                        <TableCell>Points</TableCell>
                         <TableCell>Actions</TableCell>
                     </TableRow>
                 </TableHead>
@@ -72,12 +73,19 @@ function AllGstBlog() {
                     {services.map((service, index) => (
                         <TableRow key={service.id}>
                             <TableCell>{index + 1}</TableCell>
+                            <TableCell>{service.serviceName}</TableCell>
                             <TableCell>{service.title}</TableCell>
                             <TableCell>{service.description}</TableCell>
                             <TableCell>
                                 <img src={service.image} alt="Service" width="50" height="50" />
                             </TableCell>
-                          
+                            <TableCell>
+                                <ul>
+                                    {service.points.map((point, idx) => (
+                                        <li key={idx}>• {point}</li>
+                                    ))}
+                                </ul>
+                            </TableCell>
                             <TableCell>
                                 <Button
                                     variant="contained"
@@ -105,4 +113,4 @@ function AllGstBlog() {
     );
 }
 
-export default AllGstBlog;
+export default AllService;

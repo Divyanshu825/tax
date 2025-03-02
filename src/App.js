@@ -18,9 +18,12 @@ import Signup from './page/signup/Signup.jsx';
 import Dashboard from './admin/dashboard/Dashboard.jsx';
 import Admin from './admin/Admin.jsx';
 import AddProduct from './admin/addproduct/AddProduct.jsx';
-import IncomeTaxBlog from './admin/IncomeTaxBlog/IncomeTaxBlog.jsx';
 import AddGstBlog from './admin/GstBlogs/AddGstBlog/AddGstBlog.jsx';
 import AllGstBlog from './admin/GstBlogs/AllGstBlog/AllGstBlog.jsx';
+import AllIncomeTaxBlog from './admin/IncomeTaxBlog/AllIncomeTaxBlog/AllIncomeTaxBlog.jsx';
+import AddIncomeTaxBlog from './admin/IncomeTaxBlog/AddIncomeTaxBlog/AddIncomeTaxBlog.jsx';
+import AllService from './admin/adminService/AllService/AllService.jsx';
+import AddService from './admin/adminService/AddService/AddService.jsx';
 
 
 const App = () => {
@@ -48,7 +51,11 @@ const App = () => {
           <Route path="/admin-pannel/addproduct" element={<AddProduct />} />
           <Route path="/admin-pannel/AddGstBlog" element={<AddGstBlog />} />
           <Route path="/admin-pannel/AllGstBlog" element={<AllGstBlog />} />
-          <Route path="/admin-pannel/IncomeTaxBlog" element={<IncomeTaxBlog />} />
+          <Route path="/admin-pannel/AddIncomeTaxBlog" element={<AddIncomeTaxBlog />} />
+          <Route path="/admin-pannel/AllIncomeTaxBlog" element={<AllIncomeTaxBlog />} />
+
+          <Route path="/admin-pannel/AllService" element={<AllService />} />
+          <Route path="/admin-pannel/AddService" element={<AddService />} />
 
           
         </Routes>
