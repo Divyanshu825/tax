@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { auth } from "../../firebase";
+import { auth, db } from "../../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
-    const [formData, setFormData] = useState({ name: "", email: "", password: "" });
+    const [formData, setFormData] = useState({ name: "", email: "", password: ""});
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null);
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,8 +22,14 @@ export default function Signup() {
 
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
-            console.log("User Registered:", userCredential.user);
+            const user = userCredential.user;
+            await setDoc(doc(db,"users",user.uid),{
+                name:formData.name,
+                email:formData.email,
+                role:"user",
+            })
             alert("Sign-up successful!");
+            navigate("/login");
         } catch (err) {
             console.error("Sign-up error:", err.message);
             setError(err.message);
@@ -43,6 +52,15 @@ export default function Signup() {
                         name="name"
                         placeholder="Full Name"
                         value={formData.name}
+                        onChange={handleChange}
+                        className="w-full p-5 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        required
+                    />
+                    <input
+                        type="text"
+                        name="role"
+                        placeholder="Role"
+                        value={formData.role}
                         onChange={handleChange}
                         className="w-full p-5 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                         required

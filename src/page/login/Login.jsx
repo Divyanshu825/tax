@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { auth } from "../../firebase";
+import { auth, db } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth"; // Import Firebase auth functions
 import img from '../../Images/Tax.webp';
+import { doc, getDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -20,19 +23,27 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(""); // Clear previous errors
-
+    
         try {
+            // Step 1: Sign in user
             const userCredential = await signInWithEmailAndPassword(auth, formData.email, formData.password);
-            const user = userCredential.user;
-            console.log("User Logged In:", user);
-            alert("Login successful!");
-            // Redirect user or navigate to another page here
+            const user = userCredential.user;    
+            // Step 2: Get user document from Firestore
+            const userRef = doc(db, "users", user.uid);
+            const userSnap = await getDoc(userRef); // Add 'await' here
+    
+            if (userSnap.exists() && userSnap.data().role === "admin") {
+                alert("Login successful!");
+                navigate("/admin"); // Redirect to admin panel
+            } else {
+                setError("You are not authorized to access admin panel.");
+            }
         } catch (error) {
             console.error("Login Error:", error.message);
             setError("Invalid email or password. Please try again.");
         }
     };
-
+    
     return (
         <div
             className="flex justify-center items-center min-h-screen bg-cover bg-center p-8"

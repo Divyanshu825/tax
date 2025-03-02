@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './AddIncomeTaxBlog.css';
+import './IncomeTaxBlog.css';
+import { db } from '../../firebase';
+import { collection,addDoc } from 'firebase/firestore';
 
 const AddIncomeTaxBlog = () => {
   const [title, setTitle] = useState('');
@@ -10,15 +12,39 @@ const AddIncomeTaxBlog = () => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImage(file);
-      setImagePreview(URL.createObjectURL(file));
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setImage(reader.result); // Store Base64 string
+      };
     }
   };
+  
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Form Submitted');
+  
+    if (!db) {
+      console.error("Firestore is not initialized.");
+      return;
+    }
+  
+    try {
+      await addDoc(collection(db, "incomeTaxblogs"), {
+        title,
+        description,
+        image,
+        timestamp: new Date(),
+      });
+      alert("IncomeTax Blog saved successfully!");
+      setTitle('');
+      setDescription('');
+      setImage(null);
+    } catch (error) {
+      console.error("Error saving blog:", error);
+    }
   };
+ 
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-8">
