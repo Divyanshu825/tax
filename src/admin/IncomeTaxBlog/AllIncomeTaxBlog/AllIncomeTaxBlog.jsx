@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Table, TableHead, TableRow, TableCell, TableBody, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function AllIncomeTaxBlog() {
     const [services, setServices] = useState([
@@ -50,12 +51,9 @@ function AllIncomeTaxBlog() {
 
     return (
         <div className="p-8">
-
-            <Button variant="contained">
-                <a href="/admin-pannel/AddIncomeTaxBlog">
-                    Add Income Tax Blog
-                </a>
-            </Button>
+                <Button variant="contained" component={Link} to="/admin-panel/AddIncomeTaxBlog">
+                   Add Income Tax Blog
+                </Button>
             <h2 className="text-2xl font-bold mb-6 justify-self-center flex" >All Income Tax Blogs</h2>
 
             <Table border="1">

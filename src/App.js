@@ -22,6 +22,7 @@ import AddProduct from './admin/addproduct/AddProduct.jsx';
 import AddGstBlog from './admin/GstBlogs/AddGstBlog/AddGstBlog.jsx';
 import AllGstBlog from './admin/GstBlogs/AllGstBlog/AllGstBlog.jsx';
 import ProtectedRoute from './component/protected/ProtectedRoute.jsx';
+import AdminPanel from './AdminPanel.jsx';
 
 
 const App = () => {
@@ -46,14 +47,8 @@ const App = () => {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
-          <Route path="/admin-panel" element={<ProtectedRoute>
-            <Routes>
-              <Route path="addproduct" element={<AddProduct />} />
-              <Route path="AddGstBlog" element={<AddGstBlog />} />
-              <Route path="AllGstBlog" element={<AllGstBlog />} />
-              {/* <Route path="IncomeTaxBlog" element={<IncomeTaxBlog />} /> */}
-            </Routes>
-          </ProtectedRoute>} />
+          <Route path="/admin-panel/*" element={<ProtectedRoute><AdminPanel /></ProtectedRoute>} />
+
 
 
         </Routes>

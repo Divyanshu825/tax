@@ -33,6 +33,8 @@ export default function Login() {
             const userSnap = await getDoc(userRef); // Add 'await' here
     
             if (userSnap.exists() && userSnap.data().role === "admin") {
+                const role = userSnap.data().role
+                localStorage.setItem("isAdmin",role === "admin" ? "true" : "false")
                 alert("Login successful!");
                 navigate("/admin"); // Redirect to admin panel
             } else {
